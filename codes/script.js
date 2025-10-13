@@ -33,6 +33,12 @@
 
     "If money is evil then crypto is hell. This is the most obnoxious group of money hungry, low IQ, high energy, jack rabbit, wannabe-big-time, small time, shit talking bothersome, irritating bunch of motherfuckers, ... I have ever had to endure for more than five minutes",
 
+    "To survive a full Bitcoin cycle, you need the brain of a philosopher, the patience of a monk, and the financial pain tolerance of a psychopath",
+
+    `"James Wynn literally has Down's syndrome and ran HL perps to 100M"
+
+    If you're smater than him, why aren't you rich? Turns out you're fucking stupid`,
+
     
     
     // life tips
@@ -54,24 +60,27 @@
 
     `Being honest may not get you a lot of friends, but it'll always get you the right ones.`,
 
+    `Don't ever attach yourself to a person, a place, a company, or a project. Attach yourself to a mission, a calling, and a purpose only.
+
+    That's how you keep your power and your peace.`,
 
   ];
   
   const images = [
     { url: "https://github.com/Quangsumi/pi_dashboard/blob/main/images/top1.gif?raw=true", clockPosition: "top" },
-    { url: "https://github.com/Quangsumi/pi_dashboard/blob/main/images/top2.gif?raw=true", clockPosition: "top" },
+    { url: "https://github.com/Quangsumi/pi_dashboard/blob/main/images/top2.webp?raw=true", clockPosition: "top" },
     { url: "https://github.com/Quangsumi/pi_dashboard/blob/main/images/top3.gif?raw=true", clockPosition: "top" },
-    { url: "https://github.com/Quangsumi/pi_dashboard/blob/main/images/top4.gif?raw=true", clockPosition: "top" },
+    { url: "https://github.com/Quangsumi/pi_dashboard/blob/main/images/top4.webp?raw=true", clockPosition: "top" },
     { url: "https://github.com/Quangsumi/pi_dashboard/blob/main/images/top5.gif?raw=true", clockPosition: "top" },
     { url: "https://github.com/Quangsumi/pi_dashboard/blob/main/images/top6.gif?raw=true", clockPosition: "top" },
     
     { url: "https://github.com/Quangsumi/pi_dashboard/blob/main/images/center1.gif?raw=true", clockPosition: "center" },
     { url: "https://github.com/Quangsumi/pi_dashboard/blob/main/images/center2.gif?raw=true", clockPosition: "center" },
     
-    { url: "https://github.com/Quangsumi/pi_dashboard/blob/main/images/bottom1.gif?raw=true", clockPosition: "bottom" },
+    { url: "https://github.com/Quangsumi/pi_dashboard/blob/main/images/bottom1.webp?raw=true", clockPosition: "bottom" },
     { url: "https://github.com/Quangsumi/pi_dashboard/blob/main/images/bottom2.gif?raw=true", clockPosition: "bottom" },
     { url: "https://github.com/Quangsumi/pi_dashboard/blob/main/images/bottom3.gif?raw=true", clockPosition: "bottom" },
-    { url: "https://github.com/Quangsumi/pi_dashboard/blob/main/images/bottom4.gif?raw=true", clockPosition: "bottom" },
+    { url: "https://github.com/Quangsumi/pi_dashboard/blob/main/images/bottom4.webp?raw=true", clockPosition: "bottom" },
     { url: "https://github.com/Quangsumi/pi_dashboard/blob/main/images/bottom5.gif?raw=true", clockPosition: "bottom" },
     { url: "https://github.com/Quangsumi/pi_dashboard/blob/main/images/bottom6.gif?raw=true", clockPosition: "bottom" },
     { url: "https://github.com/Quangsumi/pi_dashboard/blob/main/images/bottom7.gif?raw=true", clockPosition: "bottom" },
