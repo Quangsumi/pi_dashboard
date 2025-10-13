@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <title>Responsive 3 Panel Layout</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="container">
+    <div id="left" class="panel">
+      <p id="quote"></p>
+    </div>
+    <div class="divider" id="divider-left"></div>
+    <div id="center" class="panel">
+      <div id="hanoi-clock"></div>
+      <img id="randomImage" alt="Random content" />
+      <button id="nextArrow">›</button>
+    </div>
+    <div class="divider" id="divider-right"></div>
+    <div id="right" class="panel">
+      <table id="clocks">
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

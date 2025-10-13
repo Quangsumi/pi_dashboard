@@ -1,0 +1,152 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: #121212;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    color: #f0f0f0;
+    display: flex;
+  }
+  
+  #container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    min-width: 400px;
+    min-height: 400px;
+  }
+  
+  .panel {
+    flex: 1;
+    border: 1px solid #1a1a1a;
+    background: #1e1e1e;
+    min-width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  /* Quote style */
+  #quote {
+    font-family: "Patrick Hand", cursive;
+    font-size: 2rem;
+    font-style: italic;
+    line-height: 1.6;
+    color: #f5e1a4;
+    text-align: left;
+    padding: 20px;
+  }
+  
+  /* Center panel image/gif */
+  #center {
+    padding: 5px; /* little padding only */
+    flex: 1 1 auto; /* takes remaining space */
+
+    position: relative; /* allows absolute positioning of arrow */
+  }
+  #center img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 4px;
+  }
+  #nextArrow {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: #ffffff42;
+    font-size: 1.2rem;
+    padding: 2px 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  #nextArrow:hover {
+    background: rgba(255, 255, 255, 0.3);
+  }
+  #hanoi-clock {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-family: "Segoe UI", "Roboto", sans-serif;
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.25);
+  padding: 10px 20px;
+  border-radius: 20px;
+  }
+  .clock-top {
+    top: 20px;
+    bottom: auto;
+  }
+
+  .clock-center {
+    top: 50%;
+    transform: translate(-50%, -50%)!important;
+  }
+
+  .clock-bottom {
+    bottom: 20px;
+    top: auto;
+  }
+
+
+  /* Divider (splitter) */
+  .divider {
+    width: 3px;
+    background: #222; /* less visible */
+    cursor: col-resize;
+  }
+  
+  #left {
+    flex: 0 0 22%;
+  }
+
+  /* World clock table centered */
+  #right {
+    flex-direction: column;
+    padding: 10px;
+    flex: 0 0 22%;
+  }
+  
+  #right table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1.5rem; /* 2x larger font */
+  }
+  
+  #right td {
+    padding: 8px 10px;
+  }
+  
+  #right td:first-child {
+    text-align: left;
+  }
+  
+  #right td:last-child {
+    text-align: right;
+  }
+  
+  /* remove lines */
+  #right tr td {
+    border: none;
+  }
+  
