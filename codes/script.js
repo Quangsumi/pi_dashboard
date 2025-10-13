@@ -58,22 +58,23 @@
   ];
   
   const images = [
-    { url: "https://s14.gifyu.com/images/bwqfZ.gif", clockPosition: "top" },
-    { url: "https://i.giphy.com/11D0XkJInM2ssU.webp", clockPosition: "top" },
-    { url: "https://c.tenor.com/rdavuU_zkdcAAAAd/tenor.gif", clockPosition: "top" },
-    { url: "https://media4.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3ZnhkZHRrcWlwd3drenprOGR6cHR4OWF5N2tiMXBtbG9sMXpibG14NiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/N5B19awm2YvwMwf8JE/giphy.webp", clockPosition: "top" },
-    { url: "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExeWNpNXg3cjR4MnMzd2RlOHplY3Aza3c3c2Fjc2hzczIwZjE1dmN3ZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/aT3K8yqIURSamDTl6c/giphy.gif", clockPosition: "top" },
-    { url: "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExdTE0NmdqNGJidHluYTZlYnViNWRrOG9tbW1qcHB4d3o3azZybnF1aCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/qpNkCSUtOJrG8y8kHS/giphy.gif", clockPosition: "top" },
+    { url: "https://github.com/Quangsumi/pi_dashboard/blob/main/images/top1.gif?raw=true", clockPosition: "top" },
+    { url: "https://github.com/Quangsumi/pi_dashboard/blob/main/images/top2.gif?raw=true", clockPosition: "top" },
+    { url: "https://github.com/Quangsumi/pi_dashboard/blob/main/images/top3.gif?raw=true", clockPosition: "top" },
+    { url: "https://github.com/Quangsumi/pi_dashboard/blob/main/images/top4.gif?raw=true", clockPosition: "top" },
+    { url: "https://github.com/Quangsumi/pi_dashboard/blob/main/images/top5.gif?raw=true", clockPosition: "top" },
+    { url: "https://github.com/Quangsumi/pi_dashboard/blob/main/images/top6.gif?raw=true", clockPosition: "top" },
     
-    { url: "https://s14.gifyu.com/images/bwqNi.gif", clockPosition: "center" },
-    { url: "https://c.tenor.com/4XJK04-9ZdsAAAAd/tenor.gif", clockPosition: "center" },
+    { url: "https://github.com/Quangsumi/pi_dashboard/blob/main/images/center1.gif?raw=true", clockPosition: "center" },
+    { url: "https://github.com/Quangsumi/pi_dashboard/blob/main/images/center2.gif?raw=true", clockPosition: "center" },
     
-    { url: "https://s14.gifyu.com/images/bwqNj.gif", clockPosition: "bottom" },
-    { url: "https://c.tenor.com/nqMC-PZUsUwAAAAd/tenor.gif", clockPosition: "bottom" },
-    { url: "https://i.giphy.com/rDFskmIkk7iKU5YcZK.webp", clockPosition: "bottom" },
-    { url: "https://c.tenor.com/dFRmjNDK9TwAAAAd/tenor.gif", clockPosition: "bottom" },
-    { url: "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExNG1xOG9hNzMzN2ZhZWhyZGxueTNmYWkxbjA2OGEyc3ZoMnhhdm96eiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/4lV5rnDf3rJZ8kKD7K/giphy.gif", clockPosition: "bottom" },
-    { url: "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExMDdvc3oxMTdwOG02MnhhdnUxMHgxejBjangxdXFqazF0ZHh6ZWo3diZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/x1SBCCQ5Rcj9kUbqgV/giphy.gif", clockPosition: "bottom" },
+    { url: "https://github.com/Quangsumi/pi_dashboard/blob/main/images/bottom1.gif?raw=true", clockPosition: "bottom" },
+    { url: "https://github.com/Quangsumi/pi_dashboard/blob/main/images/bottom2.gif?raw=true", clockPosition: "bottom" },
+    { url: "https://github.com/Quangsumi/pi_dashboard/blob/main/images/bottom3.gif?raw=true", clockPosition: "bottom" },
+    { url: "https://github.com/Quangsumi/pi_dashboard/blob/main/images/bottom4.gif?raw=true", clockPosition: "bottom" },
+    { url: "https://github.com/Quangsumi/pi_dashboard/blob/main/images/bottom5.gif?raw=true", clockPosition: "bottom" },
+    { url: "https://github.com/Quangsumi/pi_dashboard/blob/main/images/bottom6.gif?raw=true", clockPosition: "bottom" },
+    { url: "https://github.com/Quangsumi/pi_dashboard/blob/main/images/bottom7.gif?raw=true", clockPosition: "bottom" },
   ];
   
 //#region quotes + images
