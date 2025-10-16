@@ -1,69 +1,154 @@
   const quotes = [
-    //motivation, psychology
-    "Until death, all defeat is psychological",
-    "The only real test of intelligence is if you get what you want out of life",
+    //#region Motivation, Psychology
+    { 
+      panelSize: "small", 
+      fontSize: "2rem",
+      content: `<p style="text-align:center;">Until death, <br /> all defeat is psychological</p>`
+    },
+    { 
+      panelSize: "small", 
+      fontSize: "2rem",
+      content: `The only real test of intelligence is if you get what you want out of life.`
+    },
+    { 
+      panelSize: "small", 
+      fontSize: "2rem",
+      content: `The way life goes on after people die is one of the most humbling and scary things in life.`
+    },
+    { 
+      panelSize: "medium", 
+      fontSize: "1.8rem",
+      content: `Ask yourself: "How can I accomplish my 10-year plan in 6 months?" <br /><br />
+        You will probably fail, but you'll be far ahead if you accept it would take 10 years.`
+    },
+    { 
+      panelSize: "medium", 
+      fontSize: "1.8rem",
+      content: `Let the young man in his desperation go out and hunt. If he kills the elephant, his poverty ends; if the elephant kills him, his poverty ends.`
+    },
+    { 
+      panelSize: "large", 
+      fontSize: "1.8rem",
+      content: `"How do men take care of their mental health if they don't talk to anyone about their struggles?"<br /><br />
+        They believe that you can solve every problem by getting jacked and making more money.`
+    },
+    //#endregion
+        
+    //#region Finance
+    { 
+      panelSize: "small", 
+      fontSize: "2rem",
+      content: `You don't quit playing the game you enjoy because you got a high score.`
+    },
+    { 
+      panelSize: "small", 
+      fontSize: "2rem",
+      content: `You act too quickly when you are trying to grow capital, and you act too slowly when you are trying to protect capital.`
+    },
+    { 
+      panelSize: "small", 
+      fontSize: "2rem",
+      content: `Only way to not blow up in the long run is to basically constantly be thinking about blowing up.`
+    },
+    { 
+      panelSize: "small", 
+      fontSize: "2rem",
+      content: `You want the salesperson who can sell ice to Eskimos, not the one who can sell water in a desert.`
+    },
+    { 
+      panelSize: "small", 
+      fontSize: "2rem",
+      content: `Imagine having risk management in the riskiest asset class on planet earth.`
+    },
+    { 
+      panelSize: "small", 
+      fontSize: "2rem",
+      content: `Don't fear the volatility, capitalize on it.`
+    },
+    { 
+      panelSize: "medium", 
+      fontSize: "1.8rem",
+      content: `The worst thing to come from this cycle was convincing thousands of young men at prime productivity age that "trenching" was a possible career path.`
+    },
+    { 
+      panelSize: "medium", 
+      fontSize: "1.8rem",
+      content: `To survive a full Bitcoin cycle, you need the brain of a philosopher, the patience of a monk, and the financial pain tolerance of a psychopath`
+    },
+    { 
+      panelSize: "medium", 
+      fontSize: "1.8rem",
+      content: `"How did we get so poor mom?"<br /><br />
+        "Your Dad spent more time collecting knowledge than acting on it."`
+    },
+    { 
+      panelSize: "medium", 
+      fontSize: "1.8rem",
+      content: `James Wynn literally has Down's syndrome and ran HL perps to 100M<br /><br />
+        If you're smater than him, why aren't you rich? Turns out you're fucking stupid`
+    },
+    { 
+      panelSize: "large", 
+      fontSize: "1.8rem",
+      content: `If money is evil then crypto is hell. This is the most obnoxious group of money hungry, low IQ, high energy, jack rabbit, wannabe-big-time, small time, shit talking bothersome, irritating bunch of motherfuckers, ... I have ever had to endure for more than five minutes`
+    },  
+    //#endregion
     
-    `Ask yourself: "How can I accomplish my 10-year plan in 6 months?" 
-    
-    You will probably fail, but you'll be far ahead if you accept it would take 10 years`,
-
-    "Let the young man in his desperation go out and hunt. If he kills the elephant, his poverty ends; if the elephant kills him, his poverty ends.",
-    "The way life goes on after people die is one of the most humbling and scary things in life.",
-    
-    `"How do men take care of their mental health if they don't talk to anyone about their struggles?"
-
-    They believe that you can solve every problem by getting jacked and making more money`,
-
-    
-
-    
-    // finance
-    "You don't quit playing the game you enjoy because you got a high score",
-    "You act too quickly when you are trying to grow capital, and you act too slowly when you are trying to protect capital",
-    "Only way to not blow up in the long run is to basically constantly be thinking about blowing up",
-    "You want the salesperson who can sell ice to Eskimos, not the one who can sell water in a desert",
-    "Imagine having risk management in the riskiest asset class on planet earth",
-    `The worst thing to come from this cycle was convincing thousands of young men at prime productivity age that "trenching" was a possible career path.`,
-    
-    `"How did we get so poor mom?"
-
-    "Your Dad spent more time collecting knowledge than acting on it."`,
-
-    "Don't fear the volatility, capitalize on it.",
-
-    "If money is evil then crypto is hell. This is the most obnoxious group of money hungry, low IQ, high energy, jack rabbit, wannabe-big-time, small time, shit talking bothersome, irritating bunch of motherfuckers, ... I have ever had to endure for more than five minutes",
-
-    "To survive a full Bitcoin cycle, you need the brain of a philosopher, the patience of a monk, and the financial pain tolerance of a psychopath",
-
-    `"James Wynn literally has Down's syndrome and ran HL perps to 100M"
-
-    If you're smater than him, why aren't you rich? Turns out you're fucking stupid`,
-
-    
-    
-    // life tips
-    `When I look back on my past and think how much time I wasted on nothing, how much time has been lost in futilities, errors, laziness, incapacity to live; how little I appreciated it, how many times I sinned against my heart and soul-then my heart bleeds. Life is a gift, life is happiness, every minute can be an eternity of happiness!`,
-    `Lately when I meet new people, I ask them what their hobbies are instead of what they do for work, and let me tell you, the conversations have been absolutely top tier!`,
-    `I asked my parents what kept them together all these years & my dad said "WE NEVER GAVE UP ON THE SAME DAY."`,
-    "Instead of regretting that you can't wake up at age 18 again, pretend to yourself that you're 90 and you've woken up at age 40 again, and that you get to magically, wonderfully have the next 50 years again.",
-    "If you need to be rude, aggressive to make your point or to have an argument then I know for a fact you're just a weak man and will never show respect or admiration towards you",
-    
-    `Imagine reading a book with no way to turn back the page. 
-    
-    How carefully would you read it?
-    
-    That's life`,
-
-    `My dad just called me outta school because "it was a nice day"`,
-
-    `My partner keep showing orange juice to our orange cat and saying, “this is what happens to bad orange kitties” and then drinking it menacingly`,
-
-    `Being honest may not get you a lot of friends, but it'll always get you the right ones.`,
-
-    `Don't ever attach yourself to a person, a place, a company, or a project. Attach yourself to a mission, a calling, and a purpose only.
-
-    That's how you keep your power and your peace.`,
-
+    //#region Life tips
+    { 
+      panelSize: "small", 
+      fontSize: "2rem",
+      content: `My dad just called me outta school because "it was a nice day"`
+    },
+    { 
+      panelSize: "small", 
+      fontSize: "2rem",
+      content: `Being honest may not get you a lot of friends, but it'll always get you the right ones.`
+    },
+    { 
+      panelSize: "medium", 
+      fontSize: "1.8rem",
+      content: `Imagine reading a book with no way to turn back the page. <br /><br />
+        How carefully would you read it? <br /><br />
+        That's life`
+    },
+    { 
+      panelSize: "medium", 
+      fontSize: "1.8rem",
+      content: `My partner keep showing orange juice to our orange cat and saying, “this is what happens to bad orange kitties” and then drinking it menacingly.`
+    },
+    { 
+      panelSize: "medium", 
+      fontSize: "1.8rem",
+      content: `I asked my parents what kept them together all these years & my dad said: <br /><br />"WE NEVER GAVE UP ON THE SAME DAY."`
+    },
+    { 
+      panelSize: "medium", 
+      fontSize: "1.8rem",
+      content: `If you need to be rude, aggressive to make your point or to have an argument then I know for a fact you're just a weak man and will never show respect or admiration towards you.`
+    },
+    { 
+      panelSize: "medium", 
+      fontSize: "1.8rem",
+      content: `Lately when I meet new people, I ask them what their hobbies are instead of what they do for work, and let me tell you, the conversations have been absolutely top tier!`
+    },
+    { 
+      panelSize: "medium", 
+      fontSize: "1.8rem",
+      content: `Don't ever attach yourself to a person, a place, a company, or a project. Attach yourself to a mission, a calling, and a purpose only. <br /><br />
+        That's how you keep your power and your peace.`
+    },
+    { 
+      panelSize: "large", 
+      fontSize: "1.8rem",
+      content: `Instead of regretting that you can't wake up at age 18 again, pretend to yourself that you're 90 and you've woken up at age 40 again, and that you get to magically, wonderfully have the next 50 years again.`
+    },
+    { 
+      panelSize: "large", 
+      fontSize: "1.6rem",
+      content: `When I look back on my past and think how much time I wasted on nothing, how much time has been lost in futilities, errors, laziness, incapacity to live; how little I appreciated it, how many times I sinned against my heart and soul-then my heart bleeds. Life is a gift, life is happiness, every minute can be an eternity of happiness!`
+    },
+    //#endregion
   ];
   
   const images = [
@@ -106,10 +191,10 @@
   function showQuote() {
     const quoteElement = document.getElementById("quote");
     const currentQuote = shuffledQuotes[quoteIndex];
-    quoteElement.innerText = currentQuote;
+    quoteElement.innerHTML = currentQuote.content;
     quoteIndex = (quoteIndex + 1) % shuffledQuotes.length; // move next
 
-    adjustLeftPanel();
+    adjustQuotePanel(currentQuote);
   }
 
   function showImage() {
@@ -130,26 +215,22 @@
     imageIndex = (imageIndex + 1) % shuffledImages.length; // move next
   }
 
-  function adjustLeftPanel() {
-    const leftPanel = document.getElementById('left');
+  function adjustQuotePanel(currentQuote) {
+    const panel = document.getElementById('left');
     const quote = document.getElementById('quote');
-    const quoteLength = quote.innerText.length;
 
-    if(quoteLength > 220) {
-      leftPanel.style.flex = "0 0 33%";
-      quote.style.fontSize = "1.6rem";
-    }
-    else if (quoteLength > 160 || quote.innerText.includes("\n")) {
-      leftPanel.style.flex = "0 0 33%";
-      quote.style.fontSize = "2rem";
-    }
-    else if (quoteLength > 130) {
-      leftPanel.style.flex = "0 0 28%";
-      quote.style.fontSize = "2rem";
-    }
-    else {
-      leftPanel.style.flex = "0 0 22%";
-      quote.style.fontSize = "2rem";
+    quote.style.fontSize = currentQuote.fontSize;
+
+    switch (currentQuote.panelSize) {
+      case 'small':
+        panel.style.flex = "0 0 22%";
+        break;
+      case 'medium':
+        panel.style.flex = "0 0 28%";
+        break;
+      case 'large':
+        panel.style.flex = "0 0 33%";
+        break;
     }
   }
 
