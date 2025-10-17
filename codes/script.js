@@ -152,26 +152,28 @@
   ];
   
   const images = [
-    { url: "https://github.com/Quangsumi/pi_dashboard/blob/main/images/top1.gif?raw=true", clockPosition: "top" },
-    { url: "https://github.com/Quangsumi/pi_dashboard/blob/main/images/top2.webp?raw=true", clockPosition: "top" },
-    { url: "https://github.com/Quangsumi/pi_dashboard/blob/main/images/top3.gif?raw=true", clockPosition: "top" },
-    { url: "https://github.com/Quangsumi/pi_dashboard/blob/main/images/top4.webp?raw=true", clockPosition: "top" },
-    { url: "https://github.com/Quangsumi/pi_dashboard/blob/main/images/top5.gif?raw=true", clockPosition: "top" },
-    { url: "https://github.com/Quangsumi/pi_dashboard/blob/main/images/top6.gif?raw=true", clockPosition: "top" },
+    { url: "https://raw.githubusercontent.com/Quangsumi/pi_dashboard/refs/heads/main/images/top1.gif", clockPosition: "top" },
+    { url: "https://raw.githubusercontent.com/Quangsumi/pi_dashboard/refs/heads/main/images/top2.webp", clockPosition: "top" },
+    { url: "https://raw.githubusercontent.com/Quangsumi/pi_dashboard/refs/heads/main/images/top3.gif", clockPosition: "top" },
+    { url: "https://raw.githubusercontent.com/Quangsumi/pi_dashboard/refs/heads/main/images/top4.webp", clockPosition: "top" },
+    { url: "https://raw.githubusercontent.com/Quangsumi/pi_dashboard/refs/heads/main/images/top5.gif", clockPosition: "top" },
+    { url: "https://raw.githubusercontent.com/Quangsumi/pi_dashboard/refs/heads/main/images/top6.gif", clockPosition: "top" },
     
-    { url: "https://github.com/Quangsumi/pi_dashboard/blob/main/images/center1.gif?raw=true", clockPosition: "center" },
-    { url: "https://github.com/Quangsumi/pi_dashboard/blob/main/images/center2.gif?raw=true", clockPosition: "center" },
+    { url: "https://raw.githubusercontent.com/Quangsumi/pi_dashboard/refs/heads/main/images/center1.gif", clockPosition: "center" },
+    { url: "https://raw.githubusercontent.com/Quangsumi/pi_dashboard/refs/heads/main/images/center2.gif", clockPosition: "center" },
     
-    { url: "https://github.com/Quangsumi/pi_dashboard/blob/main/images/bottom1.webp?raw=true", clockPosition: "bottom" },
-    { url: "https://github.com/Quangsumi/pi_dashboard/blob/main/images/bottom2.gif?raw=true", clockPosition: "bottom" },
-    { url: "https://github.com/Quangsumi/pi_dashboard/blob/main/images/bottom3.gif?raw=true", clockPosition: "bottom" },
-    { url: "https://github.com/Quangsumi/pi_dashboard/blob/main/images/bottom4.webp?raw=true", clockPosition: "bottom" },
-    { url: "https://github.com/Quangsumi/pi_dashboard/blob/main/images/bottom5.gif?raw=true", clockPosition: "bottom" },
-    { url: "https://github.com/Quangsumi/pi_dashboard/blob/main/images/bottom6.gif?raw=true", clockPosition: "bottom" },
-    { url: "https://github.com/Quangsumi/pi_dashboard/blob/main/images/bottom7.gif?raw=true", clockPosition: "bottom" },
+    { url: "https://raw.githubusercontent.com/Quangsumi/pi_dashboard/refs/heads/main/images/bottom1.webp", clockPosition: "bottom" },
+    { url: "https://raw.githubusercontent.com/Quangsumi/pi_dashboard/refs/heads/main/images/bottom2.gif", clockPosition: "bottom" },
+    { url: "https://raw.githubusercontent.com/Quangsumi/pi_dashboard/refs/heads/main/images/bottom3.gif", clockPosition: "bottom" },
+    { url: "https://raw.githubusercontent.com/Quangsumi/pi_dashboard/refs/heads/main/images/bottom4.webp", clockPosition: "bottom" },
+    { url: "https://raw.githubusercontent.com/Quangsumi/pi_dashboard/refs/heads/main/images/bottom5.gif", clockPosition: "bottom" },
+    { url: "https://raw.githubusercontent.com/Quangsumi/pi_dashboard/refs/heads/main/images/bottom6.gif", clockPosition: "bottom" },
+    { url: "https://raw.githubusercontent.com/Quangsumi/pi_dashboard/refs/heads/main/images/bottom7.gif", clockPosition: "bottom" },
   ];
   
 //#region quotes + images
+
+  cacheImages();
 
   let shuffledQuotes = shuffleArray([...quotes]);
   let shuffledImages = shuffleArray([...images]);
@@ -206,7 +208,26 @@
     const imageUrl = currentImage.url;
     const clockPosition = currentImage.clockPosition;
 
-    imageElement.src = imageUrl;
+    if (!('caches' in window)) {
+      imageElement.src = imageUrl;
+      return;
+    }
+
+    caches.open('image-cache-v1')
+    .then(cache => cache.match(imageUrl))
+    .then(response => {
+      if (response) {
+        return response.blob().then(blob => {
+          imageElement.src = URL.createObjectURL(blob);
+        });
+      } else {
+        imageElement.src = imageUrl;
+      }
+    })
+    .catch(err => {
+      console.error('Error showing image:', err);
+      imageElement.src = imageUrl;
+    });
 
     // Reset clock position classes
     clockElement.classList.remove("clock-top", "clock-center", "clock-bottom");
@@ -246,6 +267,36 @@
       [arr[i], arr[j]] = [arr[j], arr[i]];
     }
     return arr;
+  }
+
+  async function cacheImages() {
+    const imageUrls = images.map(item => (typeof item === "string" ? item : item.url));
+    const cache = await caches.open("image-cache-v1");
+    let totalCachedImage = 0;
+
+    for (const url of imageUrls) {
+      const match = await cache.match(url);
+      if (!match) {
+        const response = await fetch(url)
+          .catch(err => {
+              console.warn("❌ Fetch failed:", url, err);
+              return null; // return response = null
+            });
+            
+        if (response && response.ok) {
+          await cache.put(url, response.clone());
+          totalCachedImage++;
+          console.log("Cached:", url);
+        }
+      } else {
+          console.warn("Already cached:", url);
+      }
+
+      // Delay before next request
+      await new Promise(res => setTimeout(res, 1000));
+    }
+
+    console.log(`✅ Total images cached: ${totalCachedImage}`);
   }
 
 //#endregion
