@@ -1,4 +1,5 @@
   const quotes = [
+    
     //#region Motivation, Psychology
     { 
       panelSize: "small", 
@@ -98,12 +99,27 @@
     { 
       panelSize: "small", 
       fontSize: "2rem",
-      content: `My dad just called me outta school because "it was a nice day"`
+      content: `My dad just called me outta school because "it was a nice day".`
     },
     { 
       panelSize: "small", 
       fontSize: "2rem",
       content: `Being honest may not get you a lot of friends, but it'll always get you the right ones.`
+    },
+    { 
+      panelSize: "small", 
+      fontSize: "2rem",
+      content: `<p style="text-align:center;">DO<br /> NOT <br />RESUSCITATE</p>`
+    },
+    { 
+      panelSize: "small", 
+      fontSize: "2rem",
+      content: `"Yes, it's only one kid, but tell that to his mother."`
+    },
+    { 
+      panelSize: "small", 
+      fontSize: "2rem",
+      content: `My expectations were reduced to zero when I was 21. Everything since then has been a bonus.`
     },
     { 
       panelSize: "medium", 
@@ -145,8 +161,25 @@
     },
     { 
       panelSize: "large", 
+      fontSize: "1.8rem",
+      content: `Who do you feel that you'd want to start spending the last day of your life with and then figure out a way to start meeting them now or tomorrow and meet them as often as you can cause why wait for the last day and don't bother with the others.`
+    },
+    { 
+      panelSize: "large", 
+      fontSize: "1.8rem",
+      content: `Maturing is realizing you don't want to be around drama, stress, or conflict anymore. You start choosing calm over chaos, and distance over disrespect. You start prioritizing your peace, mental health, and happiness — over everything.`
+    },
+    { 
+      panelSize: "large", 
       fontSize: "1.6rem",
       content: `When I look back on my past and think how much time I wasted on nothing, how much time has been lost in futilities, errors, laziness, incapacity to live; how little I appreciated it, how many times I sinned against my heart and soul-then my heart bleeds. Life is a gift, life is happiness, every minute can be an eternity of happiness!`
+    },
+    { 
+      panelSize: "large", 
+      fontSize: "1.6rem",
+      content: `<p style="text-align:center;margin-bottom: 16px;">Why I Love it</p>
+        <p style="margin-bottom: 16px;">Every workout I have the opportunity to beat what I've done before, I can break a record I've set for myself, I can ascend to a higher peak.<p/>
+        It tests your mind, your will, your heart, and your body. If you are lacking in any area you will not have long term success.`
     },
     //#endregion
   ];
