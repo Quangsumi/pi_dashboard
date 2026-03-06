@@ -83,6 +83,167 @@ body {
   --switcher-bg:  rgba(8,8,8,0.92);
 }
 
+/* FOREST — deep green, earthy */
+[data-theme="forest"] {
+  --bg:           #080e09;
+  --panel-bg:     #0d1510;
+  --panel-border: #1a2e1e;
+  --divider:      #111e13;
+  --text-primary: #c8e6c0;
+  --text-dim:     #5a8a60;
+  --text-muted:   #1e3022;
+  --accent:       #4caf6e;
+  --dot-active:   #4caf6e;
+  --dot-inactive: #1a2e1e;
+  --clock-card:   #0f1a12;
+  --clock-border: #1e3525;
+  --quote-font:   'DM Serif Display', serif;
+  --clock-font:   'Cormorant Garamond', serif;
+  --hanoi-bg:     rgba(4, 10, 5, 0.65);
+  --category-color: #4caf6e;
+  --btn-bg:       rgba(76, 175, 110, 0.1);
+  --btn-hover:    rgba(76, 175, 110, 0.25);
+  --btn-text:     #4caf6e;
+}
+
+/* ROSE — warm pink dusk */
+[data-theme="rose"] {
+  --bg:           #0e080b;
+  --panel-bg:     #160d11;
+  --panel-border: #2a1520;
+  --divider:      #1a0e14;
+  --text-primary: #f0c8d8;
+  --text-dim:     #9a6070;
+  --text-muted:   #3a1e28;
+  --accent:       #e06080;
+  --dot-active:   #e06080;
+  --dot-inactive: #2a1520;
+  --clock-card:   #180e14;
+  --clock-border: #2e1822;
+  --quote-font:   'Cormorant Garamond', serif;
+  --clock-font:   'Cormorant Garamond', serif;
+  --hanoi-bg:     rgba(10, 4, 7, 0.65);
+  --category-color: #c04060;
+  --btn-bg:       rgba(224, 96, 128, 0.1);
+  --btn-hover:    rgba(224, 96, 128, 0.25);
+  --btn-text:     #e06080;
+}
+
+/* SLATE — cool blue-grey, corporate calm */
+[data-theme="slate"] {
+  --bg:           #090c10;
+  --panel-bg:     #0e1318;
+  --panel-border: #1a2230;
+  --divider:      #111820;
+  --text-primary: #c8d8e8;
+  --text-dim:     #5878a0;
+  --text-muted:   #1a2535;
+  --accent:       #7aa8d8;
+  --dot-active:   #7aa8d8;
+  --dot-inactive: #1a2535;
+  --clock-card:   #101520;
+  --clock-border: #1e2a3a;
+  --quote-font:   'Patrick Hand', cursive;
+  --clock-font:   'Space Mono', monospace;
+  --hanoi-bg:     rgba(5, 8, 14, 0.65);
+  --category-color: #5878a0;
+  --btn-bg:       rgba(122, 168, 216, 0.1);
+  --btn-hover:    rgba(122, 168, 216, 0.25);
+  --btn-text:     #7aa8d8;
+}
+
+/* DUSK — purple violet night */
+[data-theme="dusk"] {
+  --bg:           #09080e;
+  --panel-bg:     #100e18;
+  --panel-border: #201a30;
+  --divider:      #140f20;
+  --text-primary: #d8c8f0;
+  --text-dim:     #7060a8;
+  --text-muted:   #201535;
+  --accent:       #9870e0;
+  --dot-active:   #9870e0;
+  --dot-inactive: #201535;
+  --clock-card:   #120f1c;
+  --clock-border: #241a38;
+  --quote-font:   'DM Serif Display', serif;
+  --clock-font:   'Space Mono', monospace;
+  --hanoi-bg:     rgba(6, 4, 12, 0.65);
+  --category-color: #7855c0;
+  --btn-bg:       rgba(152, 112, 224, 0.1);
+  --btn-hover:    rgba(152, 112, 224, 0.25);
+  --btn-text:     #9870e0;
+}
+
+/* COPPER — oxidised bronze, vintage terminal */
+[data-theme="copper"] {
+  --bg:           #0a0804;
+  --panel-bg:     #130f08;
+  --panel-border: #2a1e0a;
+  --divider:      #1a1206;
+  --text-primary: #e8c890;
+  --text-dim:     #907040;
+  --text-muted:   #2a1e08;
+  --accent:       #c87830;
+  --dot-active:   #c87830;
+  --dot-inactive: #2a1e08;
+  --clock-card:   #160e06;
+  --clock-border: #2e200a;
+  --quote-font:   'Space Mono', monospace;
+  --clock-font:   'Space Mono', monospace;
+  --hanoi-bg:     rgba(8, 5, 2, 0.65);
+  --category-color: #a06020;
+  --btn-bg:       rgba(200, 120, 48, 0.1);
+  --btn-hover:    rgba(200, 120, 48, 0.25);
+  --btn-text:     #c87830;
+}
+
+/* ARCTIC — ice white on near-black */
+[data-theme="arctic"] {
+  --bg:           #060810;
+  --panel-bg:     #0a0e18;
+  --panel-border: #141e30;
+  --divider:      #0d1420;
+  --text-primary: #e8f4ff;
+  --text-dim:     #5888b8;
+  --text-muted:   #0e1a2c;
+  --accent:       #88ccff;
+  --dot-active:   #88ccff;
+  --dot-inactive: #0e1a2c;
+  --clock-card:   #0c1220;
+  --clock-border: #182030;
+  --quote-font:   'Cormorant Garamond', serif;
+  --clock-font:   'Space Mono', monospace;
+  --hanoi-bg:     rgba(3, 5, 12, 0.65);
+  --category-color: #5888b8;
+  --btn-bg:       rgba(136, 204, 255, 0.08);
+  --btn-hover:    rgba(136, 204, 255, 0.2);
+  --btn-text:     #88ccff;
+}
+
+/* EMBER — deep red, smoldering */
+[data-theme="ember"] {
+  --bg:           #0e0604;
+  --panel-bg:     #160a06;
+  --panel-border: #2e1008;
+  --divider:      #1e0c06;
+  --text-primary: #f0d0b0;
+  --text-dim:     #a05030;
+  --text-muted:   #2e1008;
+  --accent:       #e04020;
+  --dot-active:   #e04020;
+  --dot-inactive: #2e1008;
+  --clock-card:   #180806;
+  --clock-border: #301208;
+  --quote-font:   'DM Serif Display', serif;
+  --clock-font:   'Cormorant Garamond', serif;
+  --hanoi-bg:     rgba(10, 3, 2, 0.65);
+  --category-color: #c03018;
+  --btn-bg:       rgba(224, 64, 32, 0.1);
+  --btn-hover:    rgba(224, 64, 32, 0.25);
+  --btn-text:     #e04020;
+}
+
 /* ─── Base Layout ────────────────────────────────────── */
 
 body { background: var(--bg); }
@@ -343,42 +504,30 @@ body { background: var(--bg); }
 
 [data-theme="amber"] .clock-time { color: var(--accent); }
 
-/* ─── Theme Switcher ─────────────────────────────────── */
+/* ─── Theme Shuffle Button ───────────────────────────── */
 
-#theme-switcher {
-  position: fixed;
-  top: 12px;
-  right: 16px;
-  display: flex;
-  gap: 7px;
-  z-index: 100;
-  background: var(--switcher-bg);
-  border: 1px solid rgba(255,255,255,0.07);
-  padding: 5px 9px;
-  border-radius: 20px;
-  backdrop-filter: blur(10px);
-}
-
-.theme-btn {
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 0.7rem;
-  width: 16px;
-  height: 16px;
+#themeShuffleBtn {
+  position: absolute;
+  bottom: 14px;
+  left: 14px;
+  background: var(--btn-bg);
+  border: 1px solid rgba(255,255,255,0.09);
+  color: var(--btn-text);
+  font-size: 1rem;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0.3;
-  transition: opacity 0.2s, transform 0.15s;
-  padding: 0;
-  line-height: 1;
+  transition: background 0.2s, transform 0.4s ease;
+  z-index: 10;
+  opacity: 0.6;
 }
 
-.theme-btn:hover  { opacity: 0.7; transform: scale(1.25); }
-.theme-btn.active { opacity: 1;   transform: scale(1.2); }
-
-.theme-btn[data-theme="amber"] { color: #e8a830; }
-.theme-btn[data-theme="glass"] { color: #5b9cf6; }
-.theme-btn[data-theme="ink"]   { color: #e0e0e0; }
+#themeShuffleBtn:hover {
+  background: var(--btn-hover);
+  opacity: 1;
+  transform: rotate(180deg);
+}

@@ -276,8 +276,8 @@
   showImage();
   buildDots();
 
-  setInterval(showQuote, 300000);      // quote every 5 min
-  setInterval(showImage, 600000 * 6);  // image every 6 hours
+  setInterval(() => { randomTheme(); showQuote(); }, 300000);     // quote + theme every 5 min
+  setInterval(() => { randomTheme(); showImage(); }, 600000 * 6); // image + theme every 6 hours
 
   document.getElementById("nextArrow").addEventListener("click", refreshContent);
 
@@ -393,6 +393,7 @@
   }
 
   function refreshContent() {
+    randomTheme();
     showQuote();
     showImage();
   }
@@ -506,14 +507,32 @@
   }
 //#endregion
 
-//#region Theme switcher
-  document.querySelectorAll(".theme-btn").forEach(btn => {
-    btn.addEventListener("click", () => {
-      document.documentElement.setAttribute("data-theme", btn.dataset.theme);
-      document.querySelectorAll(".theme-btn").forEach(b => b.classList.remove("active"));
-      btn.classList.add("active");
-    });
-  });
+//#region Theme
+  const themes = [
+    "amber", "glass", "ink",
+    "forest", "rose", "slate",
+    "dusk", "copper", "arctic", "ember"
+  ];
+
+  let currentThemeIndex = 0;
+
+  function applyTheme(name) {
+    document.documentElement.setAttribute("data-theme", name);
+  }
+
+  function randomTheme() {
+    // Pick a different theme from the current one
+    let next;
+    do { next = Math.floor(Math.random() * themes.length); } while (next === currentThemeIndex);
+    currentThemeIndex = next;
+    applyTheme(themes[currentThemeIndex]);
+  }
+
+  // Shuffle button — bottom-left of center panel
+  document.getElementById("themeShuffleBtn").addEventListener("click", randomTheme);
+
+  // Auto-change theme whenever content refreshes
+  // (hooked into refreshContent which fires on arrow click, quote timer, image timer)
 //#endregion
 
 //#region Drag-to-resize
