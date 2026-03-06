@@ -1,168 +1,6 @@
-  const quotes = [
-    
-    //#region Motivation, Psychology
-    { 
-      category: "motivation",
-      content: `<p style="text-align:center;">Until death, <br /> all defeat is psychological</p>`
-    },
-    { 
-      category: "motivation",
-      content: `The only real test of intelligence is if you get what you want out of life.`
-    },
-    { 
-      category: "motivation",
-      content: `The way life goes on after people die is one of the most humbling and scary things in life.`
-    },
-    { 
-      category: "motivation",
-      content: `Ask yourself: "How can I accomplish my 10-year plan in 6 months?" <br /><br />
-        You will probably fail, but you'll be far ahead if you accept it would take 10 years.`
-    },
-    { 
-      category: "motivation",
-      content: `Let the young man in his desperation go out and hunt. If he kills the elephant, his poverty ends; if the elephant kills him, his poverty ends.`
-    },
-    { 
-      category: "motivation",
-      content: `"How do men take care of their mental health if they don't talk to anyone about their struggles?"<br /><br />
-        They believe that you can solve every problem by getting jacked and making more money.`
-    },
-    { 
-      category: "motivation",
-      content: `"If you switched bodies with the person you love the most for a year, how would you take care of their mind and body knowing you'd be giving it back to them? <br/>
-        How would you take care of that person you love the most? <br/>
-        Now do that for you."`
-    },
-    { 
-      category: "motivation",
-      content: `"Get married, kill your ego, wake up early, focus on decisions not opinions, wear sunscreen, call your mother if you can, spend your money, give family money, 
-      keep your house clean, stretch, drink water, do one thing everyday that scares you, get comfortable being uncomfortable."`
-    },
-    { 
-      category: "motivation",
-      content: `"this is a loser mindset. you will think exactly the same when you are in your 50s. you should stop thinking in age:success ratio and do what you can do best right now 
-      because you dont know how long you'll live and all you got is this exact moment."`
-    },
-    //#endregion
-        
-    //#region Finance
-    { 
-      category: "finance",
-      content: `You don't quit playing the game you enjoy because you got a high score.`
-    },
-    { 
-      category: "finance",
-      content: `You act too quickly when you are trying to grow capital, and you act too slowly when you are trying to protect capital.`
-    },
-    { 
-      category: "finance",
-      content: `Only way to not blow up in the long run is to basically constantly be thinking about blowing up.`
-    },
-    { 
-      category: "finance",
-      content: `You want the salesperson who can sell ice to Eskimos, not the one who can sell water in a desert.`
-    },
-    { 
-      category: "finance",
-      content: `Imagine having risk management in the riskiest asset class on planet earth.`
-    },
-    { 
-      category: "finance",
-      content: `<p style="text-align:center;">Don't fear the volatility, capitalize on it.</p>`
-    },
-    { 
-      category: "finance",
-      content: `The worst thing to come from this cycle was convincing thousands of young men at prime productivity age that "trenching" was a possible career path.`
-    },
-    { 
-      category: "finance",
-      content: `To survive a full Bitcoin cycle, you need the brain of a philosopher, the patience of a monk, and the financial pain tolerance of a psychopath`
-    },
-    { 
-      category: "finance",
-      content: `"How did we get so poor mom?"<br /><br />
-        "Your Dad spent more time collecting knowledge than acting on it."`
-    },
-    { 
-      category: "finance",
-      content: `James Wynn literally has Down's syndrome and ran HL perps to 100M<br /><br />
-        If you're smater than him, why aren't you rich? Turns out you're fucking stupid`
-    },
-    { 
-      category: "finance",
-      content: `If money is evil then crypto is hell. This is the most obnoxious group of money hungry, low IQ, high energy, jack rabbit, wannabe-big-time, small time, shit talking bothersome, irritating bunch of motherfuckers, ... I have ever had to endure for more than five minutes`
-    },  
-    //#endregion
-    
-    //#region Life tips
-    { 
-      category: "life",
-      content: `My dad just called me outta school because "it was a nice day".`
-    },
-    { 
-      category: "life",
-      content: `Being honest may not get you a lot of friends, but it'll always get you the right ones.`
-    },
-    { 
-      category: "life",
-      content: `<p style="text-align:center;">DO<br /> NOT <br />RESUSCITATE</p>`
-    },
-    { 
-      category: "life",
-      content: `"Yes, it's only one kid, but tell that to his mother."`
-    },
-    { 
-      category: "life",
-      content: `My expectations were reduced to zero when I was 21. Everything since then has been a bonus.`
-    },
-    { 
-      category: "life",
-      content: `Imagine reading a book with no way to turn back the page. <br /><br />
-        How carefully would you read it? <br /><br />
-        That's life`
-    },
-    { 
-      category: "life",
-      content: `My partner keep showing orange juice to our orange cat and saying, “this is what happens to bad orange kitties” and then drinking it menacingly.`
-    },
-    { 
-      category: "life",
-      content: `I asked my parents what kept them together all these years & my dad said: <br /><br />"WE NEVER GAVE UP ON THE SAME DAY."`
-    },
-    { 
-      category: "life",
-      content: `If you need to be rude, aggressive to make your point or to have an argument then I know for a fact you're just a weak man and will never show respect or admiration towards you.`
-    },
-    { 
-      category: "life",
-      content: `Lately when I meet new people, I ask them what their hobbies are instead of what they do for work, and let me tell you, the conversations have been absolutely top tier!`
-    },
-    { 
-      category: "life",
-      content: `Don't ever attach yourself to a person, a place, a company, or a project. Attach yourself to a mission, a calling, and a purpose only. <br /><br />
-        That's how you keep your power and your peace.`
-    },
-    { 
-      category: "life",
-      content: `Instead of regretting that you can't wake up at age 18 again, pretend to yourself that you're 90 and you've woken up at age 40 again, and that you get to magically, wonderfully have the next 50 years again.`
-    },
-    { 
-      category: "life",
-      content: `Who do you feel that you'd want to start spending the last day of your life with and then figure out a way to start meeting them now or tomorrow and meet them as often as you can cause why wait for the last day and don't bother with the others.`
-    },
-    { 
-      category: "life",
-      content: `When I look back on my past and think how much time I wasted on nothing, how much time has been lost in futilities, errors, laziness, incapacity to live; how little I appreciated it, how many times I sinned against my heart and soul-then my heart bleeds. Life is a gift, life is happiness, every minute can be an eternity of happiness!`
-    },
-    { 
-      category: "life",
-      content: `<p style="text-align:center;margin-bottom: 16px;">Why I Love it</p>
-        <p style="margin-bottom: 16px;">Every workout I have the opportunity to beat what I've done before, I can break a record I've set for myself, I can ascend to a higher peak.<p/>
-        It tests your mind, your will, your heart, and your body. If you are lacking in any area you will not have long term success.`
-    },
-    //#endregion
-  ];
-  
+  // quotes.json — edit that file to add/remove/change quotes, no need to touch script.js
+  let quotes = [];
+
 //#region quotes + images
 
   // GitHub API: auto-fetch image list from repo folder.
@@ -234,11 +72,13 @@
   }
 
   // ── Category filter ──────────────────────────────────
-  // Derive all unique categories from the quotes array
-  const allCategories = [...new Set(quotes.map(q => q.category).filter(Boolean))];
-  let activeCategories = new Set(allCategories); // all on by default
+  let allCategories = [];
+  let activeCategories = new Set();
 
   function buildCategoryFilters() {
+    // Derive categories now that quotes are loaded
+    allCategories = [...new Set(quotes.map(q => q.category).filter(Boolean))];
+    activeCategories = new Set(allCategories);
     const bar = document.getElementById("category-filters");
     bar.innerHTML = "";
     allCategories.forEach(cat => {
@@ -283,10 +123,27 @@
     el.textContent = current + " / " + shuffledQuotes.length;
   }
 
-  buildCategoryFilters();
+  // Load quotes from external file, then boot the quote system
+  fetch('quotes.json')
+    .then(res => {
+      if (!res.ok) throw new Error("quotes.json fetch failed: " + res.status);
+      return res.json();
+    })
+    .then(data => {
+      // Flatten grouped format [{category, quotes:[...]}] into [{category, content}, ...]
+      quotes = data.flatMap(group =>
+        group.quotes.map(content => ({ category: group.category, content }))
+      );
+      buildCategoryFilters();
+      shuffledQuotes = shuffleArray([...quotes]);
+      showQuote();
+      buildDots();
+    })
+    .catch(err => {
+      console.error("❌ Could not load quotes.json:", err);
+    });
+
   loadImagesFromGitHub();
-  showQuote();
-  buildDots();
 
   setInterval(() => { randomTheme(); showQuote(); }, 300000);     // quote + theme every 5 min
   setInterval(() => { randomTheme(); showImage(); }, 600000 * 6); // image + theme every 6 hours
