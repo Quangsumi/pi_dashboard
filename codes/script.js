@@ -145,8 +145,7 @@
 
   loadImagesFromGitHub();
 
-  setInterval(() => { randomTheme(); showQuote(); }, 300000);     // quote + theme every 5 min
-  setInterval(() => { randomTheme(); showImage(); }, 600000 * 6); // image + theme every 6 hours
+  setInterval(() => { randomTheme(); showQuote(); showImage(); }, 600000);     // every 10 min
 
   document.getElementById("nextArrow").addEventListener("click", refreshContent);
 
@@ -410,42 +409,3 @@
   // (hooked into refreshContent which fires on arrow click, quote timer, image timer)
 //#endregion
 
-//#region Drag-to-resize
-  const container = document.getElementById("container");
-  let isDragging = false;
-  let currentDivider = null;
-
-  document.querySelectorAll(".divider").forEach(divider => {
-    divider.addEventListener("mousedown", () => {
-      isDragging = true;
-      currentDivider = divider;
-      document.body.style.cursor = "col-resize";
-    });
-  });
-
-  document.addEventListener("mousemove", e => {
-    if (!isDragging) return;
-    const leftPanel  = document.getElementById("left");
-    const rightPanel = document.getElementById("right");
-    if (currentDivider.id === "divider-left") {
-      const newWidth = e.clientX;
-      if (newWidth > 100 && newWidth < window.innerWidth - 200) {
-        leftPanel.style.flex = "none";
-        leftPanel.style.width = newWidth + "px";
-      }
-    } else if (currentDivider.id === "divider-right") {
-      const rect = container.getBoundingClientRect();
-      const newRightWidth = rect.right - e.clientX;
-      if (newRightWidth > 100 && newRightWidth < window.innerWidth - 200) {
-        rightPanel.style.flex = "none";
-        rightPanel.style.width = newRightWidth + "px";
-      }
-    }
-  });
-
-  document.addEventListener("mouseup", () => {
-    isDragging = false;
-    currentDivider = null;
-    document.body.style.cursor = "default";
-  });
-//#endregion

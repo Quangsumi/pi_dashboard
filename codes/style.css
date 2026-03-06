@@ -18,7 +18,6 @@ body {
   --bg:           #0f0d0a;
   --panel-bg:     #16120d;
   --panel-border: #2a2015;
-  --divider:      #1e180f;
   --text-primary: #f0d9a0;
   --text-dim:     #8a7050;
   --text-muted:   #4a3a25;
@@ -41,7 +40,6 @@ body {
   --bg:           #0a0e18;
   --panel-bg:     rgba(255,255,255,0.04);
   --panel-border: rgba(255,255,255,0.08);
-  --divider:      rgba(255,255,255,0.05);
   --text-primary: #e8eef8;
   --text-dim:     #6878a0;
   --text-muted:   #303850;
@@ -64,7 +62,6 @@ body {
   --bg:           #080808;
   --panel-bg:     #0e0e0e;
   --panel-border: #1a1a1a;
-  --divider:      #111;
   --text-primary: #f2f2f2;
   --text-dim:     #555;
   --text-muted:   #252525;
@@ -88,7 +85,6 @@ body {
   --bg:           #080e09;
   --panel-bg:     #0d1510;
   --panel-border: #1a2e1e;
-  --divider:      #111e13;
   --text-primary: #c8e6c0;
   --text-dim:     #5a8a60;
   --text-muted:   #1e3022;
@@ -111,7 +107,6 @@ body {
   --bg:           #0e080b;
   --panel-bg:     #160d11;
   --panel-border: #2a1520;
-  --divider:      #1a0e14;
   --text-primary: #f0c8d8;
   --text-dim:     #9a6070;
   --text-muted:   #3a1e28;
@@ -134,7 +129,6 @@ body {
   --bg:           #090c10;
   --panel-bg:     #0e1318;
   --panel-border: #1a2230;
-  --divider:      #111820;
   --text-primary: #c8d8e8;
   --text-dim:     #5878a0;
   --text-muted:   #1a2535;
@@ -157,7 +151,6 @@ body {
   --bg:           #09080e;
   --panel-bg:     #100e18;
   --panel-border: #201a30;
-  --divider:      #140f20;
   --text-primary: #d8c8f0;
   --text-dim:     #7060a8;
   --text-muted:   #201535;
@@ -180,7 +173,6 @@ body {
   --bg:           #0a0804;
   --panel-bg:     #130f08;
   --panel-border: #2a1e0a;
-  --divider:      #1a1206;
   --text-primary: #e8c890;
   --text-dim:     #907040;
   --text-muted:   #2a1e08;
@@ -203,7 +195,6 @@ body {
   --bg:           #060810;
   --panel-bg:     #0a0e18;
   --panel-border: #141e30;
-  --divider:      #0d1420;
   --text-primary: #e8f4ff;
   --text-dim:     #5888b8;
   --text-muted:   #0e1a2c;
@@ -226,7 +217,6 @@ body {
   --bg:           #0e0604;
   --panel-bg:     #160a06;
   --panel-border: #2e1008;
-  --divider:      #1e0c06;
   --text-primary: #f0d0b0;
   --text-dim:     #a05030;
   --text-muted:   #2e1008;
@@ -460,17 +450,7 @@ body { background: var(--bg); }
 .clock-center { top: 50%; transform: translate(-50%, -50%) !important; }
 .clock-bottom { bottom: 18px; top: auto; }
 
-/* ─── Dividers ───────────────────────────────────────── */
 
-.divider {
-  width: 3px;
-  background: var(--divider);
-  cursor: col-resize;
-  flex-shrink: 0;
-  transition: background 0.25s;
-}
-
-.divider:hover { background: var(--accent); opacity: 0.5; }
 
 /* ─── Right Panel ────────────────────────────────────── */
 
