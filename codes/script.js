@@ -171,6 +171,7 @@
   const GITHUB_API_URL = "https://api.github.com/repos/Quangsumi/pi_dashboard/contents/images";
   const RAW_BASE       = "https://raw.githubusercontent.com/Quangsumi/pi_dashboard/main/images/";
   const IMAGE_EXTS     = new Set(["gif", "webp", "jpg", "jpeg", "png"]);
+  const VIDEO_EXTS     = new Set(["mp4", "webm", "mov", "ogg"]);
 
   let shuffledImages = [];
   let imageIndex = 0;
@@ -184,7 +185,7 @@
       const loaded = files
         .filter(f => {
           const ext = f.name.split('.').pop().toLowerCase();
-          return f.type === "file" && IMAGE_EXTS.has(ext);
+          return f.type === "file" && (IMAGE_EXTS.has(ext) || VIDEO_EXTS.has(ext));
         })
         .map(f => {
           // Derive clockPosition from filename prefix
@@ -192,7 +193,9 @@
           let clockPosition = "top"; // default
           if (name.startsWith("center")) clockPosition = "center";
           else if (name.startsWith("bottom")) clockPosition = "bottom";
-          return { url: f.download_url, clockPosition };
+          const ext = f.name.split('.').pop().toLowerCase();
+          const isVideo = VIDEO_EXTS.has(ext);
+          return { url: f.download_url, clockPosition, isVideo };
         });
 
       if (loaded.length === 0) throw new Error("No images found in repo");
@@ -250,39 +253,57 @@
   }
 
   function showImage() {
-    const imgActive = document.getElementById("randomImage");
-    const imgNext   = document.getElementById("randomImageNext");
     const clockElement = document.getElementById("hanoi-clock");
+    const currentItem  = shuffledImages[imageIndex];
+    const { url, clockPosition, isVideo } = currentItem;
 
-    const currentImage = shuffledImages[imageIndex];
-    const imageUrl = currentImage.url;
-    const clockPosition = currentImage.clockPosition;
+    function revealWith(src) {
+      if (isVideo) {
+        // Hide both img elements, show and play the video
+        const imgA = document.getElementById("randomImage");
+        const imgB = document.getElementById("randomImageNext");
+        const vid  = document.getElementById("randomVideo");
 
-    function doSwap(src) {
-      imgNext.src = src;
-      imgNext.onload = () => {
-        // crossfade: next becomes active
-        imgNext.classList.add("active");
-        imgActive.classList.remove("active");
-        // swap IDs so next time it's the other one
-        imgActive.id = "randomImageNext";
-        imgNext.id = "randomImage";
-      };
+        imgA.classList.remove("active");
+        imgB.classList.remove("active");
+
+        vid.src = src;
+        vid.classList.add("active");
+        vid.load();
+        vid.play().catch(() => {}); // suppress autoplay errors
+      } else {
+        // Hide video, crossfade between the two img elements
+        const vid     = document.getElementById("randomVideo");
+        vid.classList.remove("active");
+        vid.pause();
+        vid.src = "";
+
+        const imgActive = document.getElementById("randomImage");
+        const imgNext   = document.getElementById("randomImageNext");
+
+        imgNext.src = src;
+        imgNext.onload = () => {
+          imgNext.classList.add("active");
+          imgActive.classList.remove("active");
+          imgActive.id = "randomImageNext";
+          imgNext.id   = "randomImage";
+        };
+      }
     }
 
     if (!('caches' in window)) {
-      doSwap(imageUrl);
+      revealWith(url);
     } else {
       caches.open('image-cache-v1')
-        .then(cache => cache.match(imageUrl))
+        .then(cache => cache.match(url))
         .then(response => {
           if (response) {
-            return response.blob().then(blob => doSwap(URL.createObjectURL(blob)));
+            return response.blob().then(blob => revealWith(URL.createObjectURL(blob)));
           } else {
-            doSwap(imageUrl);
+            revealWith(url);
           }
         })
-        .catch(() => doSwap(imageUrl));
+        .catch(() => revealWith(url));
     }
 
     clockElement.classList.remove("clock-top", "clock-center", "clock-bottom");
@@ -339,11 +360,16 @@
       const match = await cache.match(url);
       if (!match) {
         const response = await fetch(url).catch(err => { console.warn("❌ Fetch failed:", url, err); return null; });
-        if (response && response.ok) { await cache.put(url, response.clone()); total++; }
+        if (response && response.ok) {
+          await cache.put(url, response.clone());
+          total++;
+          console.log(`Cached (${item.isVideo ? "video" : "image"}):`, url);
+        }
       }
-      await new Promise(res => setTimeout(res, 1000));
+      // Slightly longer delay for videos to avoid hammering on a Pi
+      await new Promise(res => setTimeout(res, item.isVideo ? 2000 : 1000));
     }
-    console.log(`✅ Total images cached: ${total}`);
+    console.log(`✅ Total media cached: ${total}`);
   }
 
 //#endregion
