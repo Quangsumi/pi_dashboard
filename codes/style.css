@@ -272,8 +272,7 @@ body { background: var(--bg); }
   align-items: center;
   overflow: hidden;
   position: relative;
-  transition: flex 0.55s cubic-bezier(0.4, 0, 0.2, 1),
-              width 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: none;
 }
 
 [data-theme="glass"] .panel {
@@ -284,14 +283,11 @@ body { background: var(--bg); }
 /* ─── Left Panel ────────────────────────────────────── */
 
 #left {
-  flex: 0 0 22%;
+  flex: 0 0 30%;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   padding: 40px 24px 24px;
-  /* Option 3: quote panel never gets compressed by the image */
-  flex-shrink: 0;
-  min-width: 180px;
 }
 
 #quote-category {
@@ -348,8 +344,7 @@ body { background: var(--bg); }
 
 #center {
   padding: 5px;
-  /* Option 3: let center fill remaining space but don't let it push quote offscreen */
-  flex: 1 1 0%;
+  flex: 1 1 auto;
   min-width: 0;
 }
 

@@ -313,15 +313,14 @@
 
   function fitQuoteText(quoteEl) {
     const panel = document.getElementById('left');
-    const panelHeight = panel.clientHeight;
     const reservedPx = 80; // top category label + bottom counter
-    const maxHeight = panelHeight - reservedPx;
+    const maxHeight = panel.clientHeight - reservedPx;
     if (maxHeight <= 0) return;
 
-    // Binary search: largest font (px) where quote fits panel height
     const rootPx = parseFloat(getComputedStyle(document.documentElement).fontSize);
     const ceilPx = 2 * rootPx; // 2rem ceiling
 
+    // Binary search: largest font size where quote fits panel height
     let lo = 10, hi = ceilPx;
     for (let i = 0; i < 12; i++) {
       const mid = (lo + hi) / 2;
