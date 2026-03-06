@@ -290,18 +290,44 @@ body { background: var(--bg); }
   padding: 40px 24px 24px;
 }
 
-#quote-category {
+/* ─── Category Filter Bar ────────────────────────────── */
+
+#category-filters {
   position: absolute;
-  top: 16px;
-  left: 22px;
-  font-size: 0.6rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--category-color);
-  font-family: 'Space Mono', monospace;
-  opacity: 0.75;
+  top: 12px;
+  left: 0;
+  right: 0;
+  display: flex;
+  gap: 6px;
+  padding: 0 16px;
   z-index: 2;
-  transition: opacity 0.4s;
+  flex-wrap: wrap;
+}
+
+.cat-btn {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.55rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 10px;
+  border: 1px solid var(--category-color);
+  color: var(--category-color);
+  background: transparent;
+  cursor: pointer;
+  opacity: 0.4;
+  transition: opacity 0.2s, background 0.2s;
+  white-space: nowrap;
+}
+
+.cat-btn.active {
+  background: var(--category-color);
+  color: var(--bg);
+  opacity: 1;
+}
+
+.cat-btn:hover {
+  opacity: 0.8;
 }
 
 #quote {

@@ -233,6 +233,43 @@
     }
   }
 
+  // ── Category filter ──────────────────────────────────
+  // Derive all unique categories from the quotes array
+  const allCategories = [...new Set(quotes.map(q => q.category).filter(Boolean))];
+  let activeCategories = new Set(allCategories); // all on by default
+
+  function buildCategoryFilters() {
+    const bar = document.getElementById("category-filters");
+    bar.innerHTML = "";
+    allCategories.forEach(cat => {
+      const btn = document.createElement("button");
+      btn.className = "cat-btn active";
+      btn.textContent = cat;
+      btn.dataset.cat = cat;
+      btn.addEventListener("click", () => {
+        const isActive = activeCategories.has(cat);
+        if (isActive && activeCategories.size === 1) return; // keep at least one on
+        if (isActive) {
+          activeCategories.delete(cat);
+          btn.classList.remove("active");
+        } else {
+          activeCategories.add(cat);
+          btn.classList.add("active");
+        }
+        rebuildQuotePool();
+      });
+      bar.appendChild(btn);
+    });
+  }
+
+  function rebuildQuotePool() {
+    const filtered = quotes.filter(q => activeCategories.has(q.category));
+    shuffledQuotes = shuffleArray(filtered);
+    quoteIndex = 0;
+    updateDots();
+    showQuote(); // immediately show a quote from the new pool
+  }
+
   let shuffledQuotes = shuffleArray([...quotes]);
   let quoteIndex = 0;
 
@@ -246,7 +283,8 @@
     el.textContent = current + " / " + shuffledQuotes.length;
   }
 
-  loadImagesFromGitHub(); // async — fetches list then calls showImage
+  buildCategoryFilters();
+  loadImagesFromGitHub();
   showQuote();
   buildDots();
 
@@ -257,16 +295,12 @@
 
   function showQuote() {
     const quoteElement = document.getElementById("quote");
-    const categoryEl = document.getElementById("quote-category");
     const currentQuote = shuffledQuotes[quoteIndex];
 
-    // Fade out
     quoteElement.classList.remove("visible");
 
     setTimeout(() => {
       quoteElement.innerHTML = currentQuote.content;
-      categoryEl.textContent = currentQuote.category || "";
-      // Fit font then fade in
       fitQuoteText(quoteElement);
       requestAnimationFrame(() => quoteElement.classList.add("visible"));
     }, 300);
