@@ -168,30 +168,19 @@ body { background: var(--bg); }
 [data-theme="amber"] #quote { font-style: italic; }
 [data-theme="glass"] #quote { font-style: italic; }
 
-/* ─── Quote Dots ─────────────────────────────────────── */
+/* ─── Quote Counter ──────────────────────────────────── */
 
 #quote-dots {
   position: absolute;
-  bottom: 16px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 6px;
+  bottom: 14px;
+  left: 22px;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.12em;
+  color: var(--text-dim);
+  opacity: 0.5;
   z-index: 2;
-}
-
-.quote-dot {
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: var(--dot-inactive);
-  transition: background 0.3s ease, transform 0.3s ease;
-  cursor: pointer;
-}
-
-.quote-dot.active {
-  background: var(--dot-active);
-  transform: scale(1.5);
+  user-select: none;
 }
 
 /* ─── Center Panel ───────────────────────────────────── */
@@ -312,21 +301,13 @@ body { background: var(--bg); }
 }
 
 #right-label {
-  font-family: 'Space Mono', monospace;
-  font-size: 0.58rem;
-  letter-spacing: 0.24em;
-  text-transform: uppercase;
-  color: var(--text-dim);
-  text-align: center;
-  margin-bottom: 16px;
-  opacity: 0.6;
-  z-index: 2;
+  display: none;
 }
 
 #clocks {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 3px;
   width: 100%;
   z-index: 2;
 }
@@ -337,8 +318,8 @@ body { background: var(--bg); }
   align-items: center;
   background: var(--clock-card);
   border: 1px solid var(--clock-border);
-  border-radius: 8px;
-  padding: 8px 14px;
+  border-radius: 7px;
+  padding: 5px 12px;
   transition: border-color 0.2s, transform 0.15s;
 }
 
@@ -349,13 +330,13 @@ body { background: var(--bg); }
 
 .clock-city {
   font-family: var(--clock-font);
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   color: var(--text-dim);
 }
 
 .clock-time {
   font-family: 'Space Mono', monospace;
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: var(--text-primary);
   letter-spacing: 0.04em;
 }

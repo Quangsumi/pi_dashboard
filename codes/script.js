@@ -262,22 +262,14 @@
   let quoteIndex = 0;
   let imageIndex = 0;
 
-  // Build progress dots (one per quote)
   function buildDots() {
-    const dotsEl = document.getElementById("quote-dots");
-    dotsEl.innerHTML = "";
-    shuffledQuotes.forEach((_, i) => {
-      const dot = document.createElement("div");
-      dot.className = "quote-dot" + (i === quoteIndex - 1 ? " active" : "");
-      dotsEl.appendChild(dot);
-    });
+    updateDots(); // just render counter immediately
   }
 
   function updateDots() {
-    const dots = document.querySelectorAll(".quote-dot");
-    dots.forEach((d, i) => {
-      d.classList.toggle("active", i === (quoteIndex - 1 + shuffledQuotes.length) % shuffledQuotes.length);
-    });
+    const el = document.getElementById("quote-dots");
+    const current = (quoteIndex === 0 ? shuffledQuotes.length : quoteIndex);
+    el.textContent = current + " / " + shuffledQuotes.length;
   }
 
   showQuote();
@@ -405,7 +397,7 @@
     showImage();
   }
 
-  // Re-fit quote text if window is resized (e.g. display settings change on Pi)
+  // Re-fit quote text if window is resized
   window.addEventListener('resize', () => {
     const quote = document.getElementById('quote');
     const currentFontSize = quote.style.fontSize;
