@@ -353,18 +353,64 @@
   function adjustQuotePanel(currentQuote) {
     const panel = document.getElementById('left');
     const quote = document.getElementById('quote');
-    quote.style.fontSize = currentQuote.fontSize;
+
+    // Option 3: set panel width based on quote size
     switch (currentQuote.panelSize) {
       case 'small':  panel.style.flex = "0 0 22%"; break;
       case 'medium': panel.style.flex = "0 0 28%"; break;
       case 'large':  panel.style.flex = "0 0 33%"; break;
     }
+
+    // Option 1: after the panel has transitioned, shrink font until text fits
+    // Use the quote's intended font size as the ceiling, never go above it
+    quote.style.fontSize = currentQuote.fontSize;
+
+    // Wait for the flex transition to settle (550ms matches CSS), then fit
+    setTimeout(() => fitQuoteText(quote, currentQuote.fontSize), 580);
+  }
+
+  function fitQuoteText(quoteEl, maxFontSize) {
+    const panel = document.getElementById('left');
+
+    // Available height: panel minus top/bottom padding and dots/category area
+    const panelHeight = panel.clientHeight;
+    const reservedPx = 80; // ~top category label + bottom dots row
+    const maxHeight = panelHeight - reservedPx;
+
+    if (maxHeight <= 0) return;
+
+    // Parse the ceiling font size (e.g. "2rem" -> px)
+    const rootFontSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
+    const ceilPx = parseFloat(maxFontSize) * (maxFontSize.endsWith('rem') ? rootFontSize : 1);
+
+    // Binary search: find largest font size (in px) where scrollHeight <= maxHeight
+    let lo = 10, hi = ceilPx;
+
+    for (let i = 0; i < 12; i++) {
+      const mid = (lo + hi) / 2;
+      quoteEl.style.fontSize = mid + "px";
+      if (quoteEl.scrollHeight <= maxHeight) {
+        lo = mid;
+      } else {
+        hi = mid;
+      }
+    }
+
+    // Apply the fitted size (floor to avoid sub-pixel overflow)
+    quoteEl.style.fontSize = Math.floor(lo) + "px";
   }
 
   function refreshContent() {
     showQuote();
     showImage();
   }
+
+  // Re-fit quote text if window is resized (e.g. display settings change on Pi)
+  window.addEventListener('resize', () => {
+    const quote = document.getElementById('quote');
+    const currentFontSize = quote.style.fontSize;
+    if (currentFontSize) fitQuoteText(quote, currentFontSize);
+  });
 
   function shuffleArray(arr) {
     for (let i = arr.length - 1; i > 0; i--) {

@@ -128,6 +128,9 @@ body { background: var(--bg); }
   justify-content: center;
   align-items: flex-start;
   padding: 40px 24px 24px;
+  /* Option 3: quote panel never gets compressed by the image */
+  flex-shrink: 0;
+  min-width: 180px;
 }
 
 #quote-category {
@@ -195,7 +198,9 @@ body { background: var(--bg); }
 
 #center {
   padding: 5px;
-  flex: 1 1 auto;
+  /* Option 3: let center fill remaining space but don't let it push quote offscreen */
+  flex: 1 1 0%;
+  min-width: 0;
 }
 
 .center-img {
