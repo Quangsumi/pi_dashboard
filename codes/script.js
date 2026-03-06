@@ -2,61 +2,43 @@
     
     //#region Motivation, Psychology
     { 
-      panelSize: "small", 
-      fontSize: "2rem",
       category: "motivation",
       content: `<p style="text-align:center;">Until death, <br /> all defeat is psychological</p>`
     },
     { 
-      panelSize: "small", 
-      fontSize: "2rem",
       category: "motivation",
       content: `The only real test of intelligence is if you get what you want out of life.`
     },
     { 
-      panelSize: "small", 
-      fontSize: "2rem",
       category: "motivation",
       content: `The way life goes on after people die is one of the most humbling and scary things in life.`
     },
     { 
-      panelSize: "medium", 
-      fontSize: "1.8rem",
       category: "motivation",
       content: `Ask yourself: "How can I accomplish my 10-year plan in 6 months?" <br /><br />
         You will probably fail, but you'll be far ahead if you accept it would take 10 years.`
     },
     { 
-      panelSize: "medium", 
-      fontSize: "1.8rem",
       category: "motivation",
       content: `Let the young man in his desperation go out and hunt. If he kills the elephant, his poverty ends; if the elephant kills him, his poverty ends.`
     },
     { 
-      panelSize: "large", 
-      fontSize: "1.8rem",
       category: "motivation",
       content: `"How do men take care of their mental health if they don't talk to anyone about their struggles?"<br /><br />
         They believe that you can solve every problem by getting jacked and making more money.`
     },
     { 
-      panelSize: "large", 
-      fontSize: "1.8rem",
       category: "motivation",
       content: `"If you switched bodies with the person you love the most for a year, how would you take care of their mind and body knowing you'd be giving it back to them? <br/>
         How would you take care of that person you love the most? <br/>
         Now do that for you."`
     },
     { 
-      panelSize: "large", 
-      fontSize: "1.8rem",
       category: "motivation",
       content: `"Get married, kill your ego, wake up early, focus on decisions not opinions, wear sunscreen, call your mother if you can, spend your money, give family money, 
       keep your house clean, stretch, drink water, do one thing everyday that scares you, get comfortable being uncomfortable."`
     },
     { 
-      panelSize: "large", 
-      fontSize: "1.8rem",
       category: "motivation",
       content: `"this is a loser mindset. you will think exactly the same when you are in your 50s. you should stop thinking in age:success ratio and do what you can do best right now 
       because you dont know how long you'll live and all you got is this exact moment."`
@@ -65,70 +47,48 @@
         
     //#region Finance
     { 
-      panelSize: "small", 
-      fontSize: "2rem",
       category: "finance",
       content: `You don't quit playing the game you enjoy because you got a high score.`
     },
     { 
-      panelSize: "small", 
-      fontSize: "2rem",
       category: "finance",
       content: `You act too quickly when you are trying to grow capital, and you act too slowly when you are trying to protect capital.`
     },
     { 
-      panelSize: "small", 
-      fontSize: "2rem",
       category: "finance",
       content: `Only way to not blow up in the long run is to basically constantly be thinking about blowing up.`
     },
     { 
-      panelSize: "small", 
-      fontSize: "2rem",
       category: "finance",
       content: `You want the salesperson who can sell ice to Eskimos, not the one who can sell water in a desert.`
     },
     { 
-      panelSize: "small", 
-      fontSize: "2rem",
       category: "finance",
       content: `Imagine having risk management in the riskiest asset class on planet earth.`
     },
     { 
-      panelSize: "small", 
-      fontSize: "2rem",
       category: "finance",
       content: `<p style="text-align:center;">Don't fear the volatility, capitalize on it.</p>`
     },
     { 
-      panelSize: "medium", 
-      fontSize: "1.8rem",
       category: "finance",
       content: `The worst thing to come from this cycle was convincing thousands of young men at prime productivity age that "trenching" was a possible career path.`
     },
     { 
-      panelSize: "medium", 
-      fontSize: "1.8rem",
       category: "finance",
       content: `To survive a full Bitcoin cycle, you need the brain of a philosopher, the patience of a monk, and the financial pain tolerance of a psychopath`
     },
     { 
-      panelSize: "medium", 
-      fontSize: "1.8rem",
       category: "finance",
       content: `"How did we get so poor mom?"<br /><br />
         "Your Dad spent more time collecting knowledge than acting on it."`
     },
     { 
-      panelSize: "medium", 
-      fontSize: "1.8rem",
       category: "finance",
       content: `James Wynn literally has Down's syndrome and ran HL perps to 100M<br /><br />
         If you're smater than him, why aren't you rich? Turns out you're fucking stupid`
     },
     { 
-      panelSize: "large", 
-      fontSize: "1.8rem",
       category: "finance",
       content: `If money is evil then crypto is hell. This is the most obnoxious group of money hungry, low IQ, high energy, jack rabbit, wannabe-big-time, small time, shit talking bothersome, irritating bunch of motherfuckers, ... I have ever had to endure for more than five minutes`
     },  
@@ -136,95 +96,65 @@
     
     //#region Life tips
     { 
-      panelSize: "small", 
-      fontSize: "2rem",
       category: "life",
       content: `My dad just called me outta school because "it was a nice day".`
     },
     { 
-      panelSize: "small", 
-      fontSize: "2rem",
       category: "life",
       content: `Being honest may not get you a lot of friends, but it'll always get you the right ones.`
     },
     { 
-      panelSize: "small", 
-      fontSize: "2rem",
       category: "life",
       content: `<p style="text-align:center;">DO<br /> NOT <br />RESUSCITATE</p>`
     },
     { 
-      panelSize: "small", 
-      fontSize: "2rem",
       category: "life",
       content: `"Yes, it's only one kid, but tell that to his mother."`
     },
     { 
-      panelSize: "small", 
-      fontSize: "2rem",
       category: "life",
       content: `My expectations were reduced to zero when I was 21. Everything since then has been a bonus.`
     },
     { 
-      panelSize: "medium", 
-      fontSize: "1.8rem",
       category: "life",
       content: `Imagine reading a book with no way to turn back the page. <br /><br />
         How carefully would you read it? <br /><br />
         That's life`
     },
     { 
-      panelSize: "medium", 
-      fontSize: "1.8rem",
       category: "life",
       content: `My partner keep showing orange juice to our orange cat and saying, “this is what happens to bad orange kitties” and then drinking it menacingly.`
     },
     { 
-      panelSize: "medium", 
-      fontSize: "1.8rem",
       category: "life",
       content: `I asked my parents what kept them together all these years & my dad said: <br /><br />"WE NEVER GAVE UP ON THE SAME DAY."`
     },
     { 
-      panelSize: "medium", 
-      fontSize: "1.8rem",
       category: "life",
       content: `If you need to be rude, aggressive to make your point or to have an argument then I know for a fact you're just a weak man and will never show respect or admiration towards you.`
     },
     { 
-      panelSize: "medium", 
-      fontSize: "1.8rem",
       category: "life",
       content: `Lately when I meet new people, I ask them what their hobbies are instead of what they do for work, and let me tell you, the conversations have been absolutely top tier!`
     },
     { 
-      panelSize: "medium", 
-      fontSize: "1.8rem",
       category: "life",
       content: `Don't ever attach yourself to a person, a place, a company, or a project. Attach yourself to a mission, a calling, and a purpose only. <br /><br />
         That's how you keep your power and your peace.`
     },
     { 
-      panelSize: "large", 
-      fontSize: "1.8rem",
       category: "life",
       content: `Instead of regretting that you can't wake up at age 18 again, pretend to yourself that you're 90 and you've woken up at age 40 again, and that you get to magically, wonderfully have the next 50 years again.`
     },
     { 
-      panelSize: "large", 
-      fontSize: "1.8rem",
       category: "life",
       content: `Who do you feel that you'd want to start spending the last day of your life with and then figure out a way to start meeting them now or tomorrow and meet them as often as you can cause why wait for the last day and don't bother with the others.`
     },
     { 
-      panelSize: "large", 
-      fontSize: "1.6rem",
       category: "life",
       content: `When I look back on my past and think how much time I wasted on nothing, how much time has been lost in futilities, errors, laziness, incapacity to live; how little I appreciated it, how many times I sinned against my heart and soul-then my heart bleeds. Life is a gift, life is happiness, every minute can be an eternity of happiness!`
     },
     { 
-      panelSize: "large", 
-      fontSize: "1.6rem",
       category: "life",
       content: `<p style="text-align:center;margin-bottom: 16px;">Why I Love it</p>
         <p style="margin-bottom: 16px;">Every workout I have the opportunity to beat what I've done before, I can break a record I've set for myself, I can ascend to a higher peak.<p/>
@@ -233,37 +163,55 @@
     //#endregion
   ];
   
-  const images = [
-    { url: "https://raw.githubusercontent.com/Quangsumi/pi_dashboard/refs/heads/main/images/top1.gif", clockPosition: "top" },
-    { url: "https://raw.githubusercontent.com/Quangsumi/pi_dashboard/refs/heads/main/images/top2.webp", clockPosition: "top" },
-    { url: "https://raw.githubusercontent.com/Quangsumi/pi_dashboard/refs/heads/main/images/top3.gif", clockPosition: "top" },
-    { url: "https://raw.githubusercontent.com/Quangsumi/pi_dashboard/refs/heads/main/images/top4.webp", clockPosition: "top" },
-    { url: "https://raw.githubusercontent.com/Quangsumi/pi_dashboard/refs/heads/main/images/top5.gif", clockPosition: "top" },
-    { url: "https://raw.githubusercontent.com/Quangsumi/pi_dashboard/refs/heads/main/images/top6.gif", clockPosition: "top" },
-    
-    { url: "https://raw.githubusercontent.com/Quangsumi/pi_dashboard/refs/heads/main/images/center1.gif", clockPosition: "center" },
-    { url: "https://raw.githubusercontent.com/Quangsumi/pi_dashboard/refs/heads/main/images/center2.gif", clockPosition: "center" },
-    
-    { url: "https://raw.githubusercontent.com/Quangsumi/pi_dashboard/refs/heads/main/images/bottom1.webp", clockPosition: "bottom" },
-    { url: "https://raw.githubusercontent.com/Quangsumi/pi_dashboard/refs/heads/main/images/bottom2.gif", clockPosition: "bottom" },
-    { url: "https://raw.githubusercontent.com/Quangsumi/pi_dashboard/refs/heads/main/images/bottom3.gif", clockPosition: "bottom" },
-    { url: "https://raw.githubusercontent.com/Quangsumi/pi_dashboard/refs/heads/main/images/bottom4.webp", clockPosition: "bottom" },
-    { url: "https://raw.githubusercontent.com/Quangsumi/pi_dashboard/refs/heads/main/images/bottom5.gif", clockPosition: "bottom" },
-    { url: "https://raw.githubusercontent.com/Quangsumi/pi_dashboard/refs/heads/main/images/bottom6.gif", clockPosition: "bottom" },
-    { url: "https://raw.githubusercontent.com/Quangsumi/pi_dashboard/refs/heads/main/images/bottom7.gif", clockPosition: "bottom" },
-  ];
-  
 //#region quotes + images
 
-  cacheImages();
+  // GitHub API: auto-fetch image list from repo folder.
+  // clockPosition is read from the filename prefix: top_, center_, or bottom_.
+  // Add new images by dropping them in the repo with the right prefix — no code changes needed.
+  const GITHUB_API_URL = "https://api.github.com/repos/Quangsumi/pi_dashboard/contents/images";
+  const RAW_BASE       = "https://raw.githubusercontent.com/Quangsumi/pi_dashboard/main/images/";
+  const IMAGE_EXTS     = new Set(["gif", "webp", "jpg", "jpeg", "png"]);
 
-  let shuffledQuotes = shuffleArray([...quotes]);
-  let shuffledImages = shuffleArray([...images]);
-  let quoteIndex = 0;
+  let shuffledImages = [];
   let imageIndex = 0;
 
+  async function loadImagesFromGitHub() {
+    try {
+      const res  = await fetch(GITHUB_API_URL);
+      if (!res.ok) throw new Error("GitHub API error: " + res.status);
+      const files = await res.json();
+
+      const loaded = files
+        .filter(f => {
+          const ext = f.name.split('.').pop().toLowerCase();
+          return f.type === "file" && IMAGE_EXTS.has(ext);
+        })
+        .map(f => {
+          // Derive clockPosition from filename prefix
+          const name = f.name.toLowerCase();
+          let clockPosition = "top"; // default
+          if (name.startsWith("center")) clockPosition = "center";
+          else if (name.startsWith("bottom")) clockPosition = "bottom";
+          return { url: f.download_url, clockPosition };
+        });
+
+      if (loaded.length === 0) throw new Error("No images found in repo");
+
+      shuffledImages = shuffleArray(loaded);
+      console.log(`✅ Loaded ${shuffledImages.length} images from GitHub`);
+
+      cacheImages(shuffledImages);
+      showImage(); // show first image once list is ready
+    } catch (err) {
+      console.error("❌ Failed to load images from GitHub:", err);
+    }
+  }
+
+  let shuffledQuotes = shuffleArray([...quotes]);
+  let quoteIndex = 0;
+
   function buildDots() {
-    updateDots(); // just render counter immediately
+    updateDots();
   }
 
   function updateDots() {
@@ -272,8 +220,8 @@
     el.textContent = current + " / " + shuffledQuotes.length;
   }
 
+  loadImagesFromGitHub(); // async — fetches list then calls showImage
   showQuote();
-  showImage();
   buildDots();
 
   setInterval(() => { randomTheme(); showQuote(); }, 300000);     // quote + theme every 5 min
@@ -292,8 +240,8 @@
     setTimeout(() => {
       quoteElement.innerHTML = currentQuote.content;
       categoryEl.textContent = currentQuote.category || "";
-      adjustQuotePanel(currentQuote);
-      // Fade in
+      // Fit font then fade in
+      fitQuoteText(quoteElement);
       requestAnimationFrame(() => quoteElement.classList.add("visible"));
     }, 300);
 
@@ -342,53 +290,23 @@
     imageIndex = (imageIndex + 1) % shuffledImages.length;
   }
 
-  function adjustQuotePanel(currentQuote) {
+  function fitQuoteText(quoteEl) {
     const panel = document.getElementById('left');
-    const quote = document.getElementById('quote');
-
-    // Option 3: set panel width based on quote size
-    switch (currentQuote.panelSize) {
-      case 'small':  panel.style.flex = "0 0 22%"; break;
-      case 'medium': panel.style.flex = "0 0 28%"; break;
-      case 'large':  panel.style.flex = "0 0 33%"; break;
-    }
-
-    // Option 1: after the panel has transitioned, shrink font until text fits
-    // Use the quote's intended font size as the ceiling, never go above it
-    quote.style.fontSize = currentQuote.fontSize;
-
-    // Wait for the flex transition to settle (550ms matches CSS), then fit
-    setTimeout(() => fitQuoteText(quote, currentQuote.fontSize), 580);
-  }
-
-  function fitQuoteText(quoteEl, maxFontSize) {
-    const panel = document.getElementById('left');
-
-    // Available height: panel minus top/bottom padding and dots/category area
     const panelHeight = panel.clientHeight;
-    const reservedPx = 80; // ~top category label + bottom dots row
+    const reservedPx = 80; // top category label + bottom counter
     const maxHeight = panelHeight - reservedPx;
-
     if (maxHeight <= 0) return;
 
-    // Parse the ceiling font size (e.g. "2rem" -> px)
-    const rootFontSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
-    const ceilPx = parseFloat(maxFontSize) * (maxFontSize.endsWith('rem') ? rootFontSize : 1);
+    // Binary search: largest font (px) where quote fits panel height
+    const rootPx = parseFloat(getComputedStyle(document.documentElement).fontSize);
+    const ceilPx = 2 * rootPx; // 2rem ceiling
 
-    // Binary search: find largest font size (in px) where scrollHeight <= maxHeight
     let lo = 10, hi = ceilPx;
-
     for (let i = 0; i < 12; i++) {
       const mid = (lo + hi) / 2;
       quoteEl.style.fontSize = mid + "px";
-      if (quoteEl.scrollHeight <= maxHeight) {
-        lo = mid;
-      } else {
-        hi = mid;
-      }
+      if (quoteEl.scrollHeight <= maxHeight) lo = mid; else hi = mid;
     }
-
-    // Apply the fitted size (floor to avoid sub-pixel overflow)
     quoteEl.style.fontSize = Math.floor(lo) + "px";
   }
 
@@ -401,8 +319,7 @@
   // Re-fit quote text if window is resized
   window.addEventListener('resize', () => {
     const quote = document.getElementById('quote');
-    const currentFontSize = quote.style.fontSize;
-    if (currentFontSize) fitQuoteText(quote, currentFontSize);
+    if (quote.innerHTML) fitQuoteText(quote);
   });
 
   function shuffleArray(arr) {
@@ -413,11 +330,12 @@
     return arr;
   }
 
-  async function cacheImages() {
-    const imageUrls = images.map(item => (typeof item === "string" ? item : item.url));
+  async function cacheImages(imageList) {
+    if (!('caches' in window)) return;
     const cache = await caches.open("image-cache-v1");
     let total = 0;
-    for (const url of imageUrls) {
+    for (const item of imageList) {
+      const url = item.url;
       const match = await cache.match(url);
       if (!match) {
         const response = await fetch(url).catch(err => { console.warn("❌ Fetch failed:", url, err); return null; });
