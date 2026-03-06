@@ -499,12 +499,12 @@ body { background: var(--bg); }
 
 [data-theme="amber"] .clock-time { color: var(--accent); }
 
-/* ─── Theme Shuffle Button ───────────────────────────── */
+/* ─── Center Panel Buttons ───────────────────────────── */
 
-#themeShuffleBtn {
+#themeShuffleBtn,
+#dimBtn {
   position: absolute;
   bottom: 14px;
-  left: 14px;
   background: var(--btn-bg);
   border: 1px solid rgba(255,255,255,0.09);
   color: var(--btn-text);
@@ -521,8 +521,37 @@ body { background: var(--bg); }
   opacity: 0.6;
 }
 
+#themeShuffleBtn { left: 14px; }
+#dimBtn          { left: 54px; } /* sits right next to shuffle btn */
+
 #themeShuffleBtn:hover {
   background: var(--btn-hover);
   opacity: 1;
   transform: rotate(180deg);
+}
+
+#dimBtn:hover {
+  background: var(--btn-hover);
+  opacity: 1;
+}
+
+#dimBtn.active {
+  opacity: 1;
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+/* Dim overlay — sits over everything but below buttons */
+#dim-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 50;
+  pointer-events: none; /* lets clicks through to buttons */
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+#dim-overlay.active {
+  opacity: 1;
 }

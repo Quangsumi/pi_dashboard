@@ -176,9 +176,11 @@
   let shuffledImages = [];
   let imageIndex = 0;
 
+  const MEDIA_LIST_KEY = "pi_dashboard_media_list";
+
   async function loadImagesFromGitHub() {
     try {
-      const res  = await fetch(GITHUB_API_URL);
+      const res = await fetch(GITHUB_API_URL);
       if (!res.ok) throw new Error("GitHub API error: " + res.status);
       const files = await res.json();
 
@@ -188,9 +190,8 @@
           return f.type === "file" && (IMAGE_EXTS.has(ext) || VIDEO_EXTS.has(ext));
         })
         .map(f => {
-          // Derive clockPosition from filename prefix
           const name = f.name.toLowerCase();
-          let clockPosition = "top"; // default
+          let clockPosition = "top";
           if (name.startsWith("center")) clockPosition = "center";
           else if (name.startsWith("bottom")) clockPosition = "bottom";
           const ext = f.name.split('.').pop().toLowerCase();
@@ -198,15 +199,37 @@
           return { url: f.download_url, clockPosition, isVideo };
         });
 
-      if (loaded.length === 0) throw new Error("No images found in repo");
+      if (loaded.length === 0) throw new Error("No media found in repo");
+
+      // Save list to localStorage so we can survive future network failures
+      try {
+        localStorage.setItem(MEDIA_LIST_KEY, JSON.stringify(loaded));
+      } catch (e) {
+        console.warn("localStorage unavailable, skipping save:", e);
+      }
 
       shuffledImages = shuffleArray(loaded);
-      console.log(`✅ Loaded ${shuffledImages.length} images from GitHub`);
-
+      console.log(`✅ Loaded ${shuffledImages.length} media files from GitHub`);
       cacheImages(shuffledImages);
-      showImage(); // show first image once list is ready
+      showImage();
+
     } catch (err) {
-      console.error("❌ Failed to load images from GitHub:", err);
+      console.error("❌ GitHub fetch failed:", err);
+
+      // Fall back to last known list from localStorage
+      try {
+        const saved = localStorage.getItem(MEDIA_LIST_KEY);
+        if (saved) {
+          const loaded = JSON.parse(saved);
+          shuffledImages = shuffleArray(loaded);
+          console.log(`⚠️ Using cached media list (${shuffledImages.length} files) from localStorage`);
+          showImage(); // files themselves are in Cache API already
+        } else {
+          console.error("❌ No fallback media list in localStorage — nothing to show");
+        }
+      } catch (e) {
+        console.error("❌ localStorage read failed:", e);
+      }
     }
   }
 
@@ -385,12 +408,8 @@
     { name: "Sydney",     tz: "Australia/Sydney" }
   ];
 
-  updateClocks();
-  updateHanoiClock();
-  setInterval(updateClocks, 1000);
-  setInterval(updateHanoiClock, 1000);
-
-  function updateClocks() {
+  // Build clock cards once — only update time text each tick
+  function buildClockCards() {
     const container = document.getElementById("clocks");
     container.innerHTML = "";
     places.forEach(place => {
@@ -403,17 +422,30 @@
 
       const time = document.createElement("span");
       time.className = "clock-time";
-      time.textContent = new Date().toLocaleTimeString("en-US", {
-        timeZone: place.tz,
-        hour: "2-digit",
-        minute: "2-digit"
-      });
+      time.dataset.tz = place.tz; // store tz for tick updates
 
       card.appendChild(city);
       card.appendChild(time);
       container.appendChild(card);
     });
   }
+
+  function updateClocks() {
+    const now = new Date();
+    document.querySelectorAll(".clock-time").forEach(el => {
+      el.textContent = now.toLocaleTimeString("en-US", {
+        timeZone: el.dataset.tz,
+        hour: "2-digit",
+        minute: "2-digit"
+      });
+    });
+  }
+
+  buildClockCards();
+  updateClocks();
+  updateHanoiClock();
+  setInterval(updateClocks, 1000);
+  setInterval(updateHanoiClock, 1000);
 
   function updateHanoiClock() {
     const now = new Date();
@@ -473,6 +505,15 @@
 
   // Shuffle button — bottom-left of center panel
   document.getElementById("themeShuffleBtn").addEventListener("click", randomTheme);
+
+  // Dim button — toggles a dark overlay over the whole dashboard
+  const dimBtn     = document.getElementById("dimBtn");
+  const dimOverlay = document.getElementById("dim-overlay");
+
+  dimBtn.addEventListener("click", () => {
+    const isDimmed = dimOverlay.classList.toggle("active");
+    dimBtn.classList.toggle("active", isDimmed);
+  });
 
   // Auto-change theme whenever content refreshes
   // (hooked into refreshContent which fires on arrow click, quote timer, image timer)
