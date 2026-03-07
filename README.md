@@ -1,6 +1,28 @@
-### Pi 4 Model B
-### Waveshare 7.9inch, 400×1280, IPS, DSI Interface
+# 🖥️ Pi Dashboard
 
-### Video demo:
-[![Watch the video](https://img.youtube.com/vi/qbVq-vvvoJE/maxresdefault.jpg)](https://www.youtube.com/watch?v=qbVq-vvvoJE)
+A personal always-on dashboard running on a Raspberry Pi touchscreen. Quotes, media, clocks, and vibes — all in one screen.
 
+---
+
+## 📺 Demo
+
+<!-- Replace with your YouTube video URL -->
+[![Pi Dashboard Demo](https://img.youtube.com/vi/YOUR_VIDEO_ID/maxresdefault.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
+
+---
+
+## ✨ Features
+
+- **Quotes** — curated quotes grouped by category (finance, life, motivation) with live category filtering. Font auto-scales to always fit the panel.
+- **Media** — images, GIFs, and short videos auto-pulled from GitHub. No hardcoded URLs — drop a file in the repo and it appears.
+- **World clocks** — 8 cities at a glance, plus a large local Hanoi clock overlaid on the media panel.
+- **10 themes** — amber, glass, ink, forest, rose, slate, dusk, copper, arctic, ember. Rotates automatically with every content change.
+- **Dim mode** — one tap to darken the screen for low-light hours.
+- **Offline resilient** — media list cached locally so the dashboard survives Pi reboots before the network is up.
+
+---
+
+## 🛠️ Built with
+
+Pure vanilla HTML, CSS, and JavaScript. No framework, no build step, no dependencies.
+Hosted on [Netlify](https://netlify.com).
