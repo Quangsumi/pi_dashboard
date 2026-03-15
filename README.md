@@ -7,7 +7,7 @@ A personal always-on dashboard running on a Raspberry Pi touchscreen. Quotes, me
 ## 📺 Demo
 
 <!-- Replace with your YouTube video URL -->
-[![Pi Dashboard Demo](https://img.youtube.com/vi/YOUR_VIDEO_ID/maxresdefault.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
+[![Pi Dashboard Demo](https://img.youtube.com/vi/BCU_xZaWYPo/maxresdefault.jpg)](https://www.youtube.com/watch?v=BCU_xZaWYPo)
 
 ---
 
