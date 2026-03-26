@@ -1,4 +1,4 @@
-  // quotes.json — edit that file to add/remove/change quotes, no need to touch script.js
+// quotes.json — edit that file to add/remove/change quotes, no need to touch script.js
   let quotes = [];
 
 //#region quotes + images
@@ -372,6 +372,11 @@
   }
 //#endregion
 
+//#region Auto-reload
+  // Reload the page every 12 hours to prevent memory buildup on long-running Pi displays
+  setTimeout(() => location.reload(), 12 * 60 * 60 * 1000);
+//#endregion
+
 //#region Theme
   const themes = [
     "amber", "glass", "ink",
@@ -408,4 +413,3 @@
   // Auto-change theme whenever content refreshes
   // (hooked into refreshContent which fires on arrow click, quote timer, image timer)
 //#endregion
-
