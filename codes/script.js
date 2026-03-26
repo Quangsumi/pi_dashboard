@@ -1,4 +1,4 @@
-  // quotes.json — edit that file to add/remove/change quotes, no need to touch script.js
+// quotes.json — edit that file to add/remove/change quotes, no need to touch script.js
   let quotes = [];
 
 //#region quotes + images
@@ -15,9 +15,9 @@
   let imageIndex = 0;
 
   const MEDIA_LIST_KEY = "pi_dashboard_media_list";
-
-  // Reload the page every 1 hours to prevent memory buildup on long-running Pi displays
-  setTimeout(() => location.reload(), 1 * 60 * 60 * 1000);
+  
+  // Reload the page every 3 hours to prevent memory buildup on long-running Pi displays
+  setTimeout(() => location.reload(), 3 * 60 * 60 * 1000);
 
   async function loadImagesFromGitHub() {
     try {
@@ -138,7 +138,7 @@
         group.quotes.map(content => ({ category: group.category, content }))
       );
       buildCategoryFilters();
-      shuffledQuotes = shuffleArray([...quotes]);
+      shuffledQuotes = shuffleArray(quotes.filter(q => activeCategories.has(q.category)));
       showQuote();
       buildDots();
     })
@@ -411,4 +411,3 @@
   // Auto-change theme whenever content refreshes
   // (hooked into refreshContent which fires on arrow click, quote timer, image timer)
 //#endregion
-
