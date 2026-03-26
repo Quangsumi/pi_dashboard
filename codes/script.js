@@ -1,4 +1,4 @@
-// quotes.json — edit that file to add/remove/change quotes, no need to touch script.js
+  // quotes.json — edit that file to add/remove/change quotes, no need to touch script.js
   let quotes = [];
 
 //#region quotes + images
@@ -15,6 +15,9 @@
   let imageIndex = 0;
 
   const MEDIA_LIST_KEY = "pi_dashboard_media_list";
+
+  // Reload the page every 1 hours to prevent memory buildup on long-running Pi displays
+  setTimeout(() => location.reload(), 1 * 60 * 60 * 1000);
 
   async function loadImagesFromGitHub() {
     try {
@@ -78,12 +81,12 @@
   function buildCategoryFilters() {
     // Derive categories now that quotes are loaded
     allCategories = [...new Set(quotes.map(q => q.category).filter(Boolean))];
-    activeCategories = new Set(allCategories);
+    activeCategories = new Set(["motivation", "life"]); // others toggled off by default
     const bar = document.getElementById("category-filters");
     bar.innerHTML = "";
     allCategories.forEach(cat => {
       const btn = document.createElement("button");
-      btn.className = "cat-btn active";
+      btn.className = "cat-btn" + (activeCategories.has(cat) ? " active" : "");
       btn.textContent = cat;
       btn.dataset.cat = cat;
       btn.addEventListener("click", () => {
@@ -372,11 +375,6 @@
   }
 //#endregion
 
-//#region Auto-reload
-  // Reload the page every 12 hours to prevent memory buildup on long-running Pi displays
-  setTimeout(() => location.reload(), 12 * 60 * 60 * 1000);
-//#endregion
-
 //#region Theme
   const themes = [
     "amber", "glass", "ink",
@@ -413,3 +411,4 @@
   // Auto-change theme whenever content refreshes
   // (hooked into refreshContent which fires on arrow click, quote timer, image timer)
 //#endregion
+
