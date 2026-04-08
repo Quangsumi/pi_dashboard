@@ -1,8 +1,8 @@
 #!/bin/bash
 # Git pull the pi_dashboard repo and log the result
-cd /home/pi/.openclaw/workspace/cronjob_send_quote_image/pi_dashboard
+cd /home/pi/.openclaw/workspace/cronjobs/pi_dashboard
 
-echo "=== $(date '+%Y-%m-%d %H:%M:%S') ==="
+echo "=== PULL FROM GITHUB: $(date '+%Y-%m-%d %H:%M:%S') ==="
 BEFORE=$(git rev-parse --short HEAD)
 git pull origin main 2>&1
 AFTER=$(git rev-parse --short HEAD)
