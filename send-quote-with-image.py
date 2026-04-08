@@ -17,12 +17,12 @@ TEST_MODE = "--test" in sys.argv
 
 BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
-QUOTES_FILE = os.getenv("QUOTES_FILE")
-IMG_DIR = os.getenv("IMG_DIR")
+QUOTES_FILE = os.path.join(script_dir, os.getenv("QUOTES_FILE"))
+IMG_DIR = os.path.join(script_dir, os.getenv("IMG_DIR"))
 IMG_EXTS = {".gif", ".jpg", ".jpeg", ".png", ".webp", ".mp4", ".webm"}
 
 # === QUOTE ===
-with open(QUOTES_FILE) as f:
+with open(QUOTES_FILE, encoding='utf-8') as f:
     data = json.load(f)
 
 all_quotes = []
@@ -85,11 +85,11 @@ if TEST_MODE:
     print(f"  Caption: {msg}")
     print(f"  Category: - {quote['category']}")
     print(f"  To: {CHAT_ID}")
-    sys.exit(0)
+    #sys.exit(0)
 
 # === SEND ===
-timestamp = datetime.now().isoformat()
-caption = f"{msg}\n\n— {quote['category']} / Sent at: {timestamp}"
+timestamp = f"=== SEND TO TG: {datetime.now().strftime("%Y-%m-%d %I:%M:%S %p")} ===="
+caption = f"{msg}\n\n— {quote['category']}"
 url = f"https://api.telegram.org/bot{BOT_TOKEN}/{endpoint}"
 
 with open(media_path, "rb") as f:
@@ -127,16 +127,14 @@ req = urllib.request.Request(
     method="POST"
 )
 
-time_msg = f"===== {timestamp} ======"
-
 try:
     with urllib.request.urlopen(req, timeout=30) as resp:
         result = json.loads(resp.read())
         if result.get("ok"):
-            print(f"{time_msg}\n\n OK: sent {chosen} to {CHAT_ID}")
+            print(f"{timestamp}\nOK: sent {chosen} to {CHAT_ID}")
         else:
-            print(f"{time_msg}\n\nERROR: {result.get('description', 'unknown error')}")
+            print(f"{timestamp}\nERROR: {result.get('description', 'unknown error')}")
             sys.exit(1)
 except Exception as e:
-    log(f"{time_msg}\n\n ERROR: {e}")
+    print(f"{timestamp}\nERROR: {e}")
     sys.exit(1)
