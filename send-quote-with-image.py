@@ -8,6 +8,7 @@ Pick the right Telegram API endpoint based on file type:
 """
 import json, random, re, os, sys, urllib.request
 from dotenv import load_dotenv
+from datetime import datetime
 
 script_dir = os.path.abspath(os.path.dirname(__file__))
 load_dotenv(os.path.join(script_dir, ".env"))
@@ -87,7 +88,8 @@ if TEST_MODE:
     sys.exit(0)
 
 # === SEND ===
-caption = f"{msg}\n\n— {quote['category']}"
+timestamp = datetime.now().isoformat()
+caption = f"{msg}\n\n— {quote['category']} / Sent at: {timestamp}"
 url = f"https://api.telegram.org/bot{BOT_TOKEN}/{endpoint}"
 
 with open(media_path, "rb") as f:
@@ -125,14 +127,16 @@ req = urllib.request.Request(
     method="POST"
 )
 
+time_msg = f"===== {timestamp} ======"
+
 try:
     with urllib.request.urlopen(req, timeout=30) as resp:
         result = json.loads(resp.read())
         if result.get("ok"):
-            log(f"OK: sent {chosen} to {CHAT_ID}")
+            print(f"{time_msg}\n\n OK: sent {chosen} to {CHAT_ID}")
         else:
-            log(f"ERROR: {result.get('description', 'unknown error')}")
+            print(f"{time_msg}\n\nERROR: {result.get('description', 'unknown error')}")
             sys.exit(1)
 except Exception as e:
-    log(f"ERROR: {e}")
+    log(f"{time_msg}\n\n ERROR: {e}")
     sys.exit(1)
