@@ -88,7 +88,8 @@ if TEST_MODE:
     #sys.exit(0)
 
 # === SEND ===
-timestamp = f"=== SEND TO TG: {datetime.now().strftime("%Y-%m-%d %I:%M:%S %p")} ===="
+formatDateTime = datetime.now().strftime("%Y-%m-%d %I:%M:%S %p")
+timestamp = f"=== SEND TO TG: {formatDateTime} ===="
 caption = f"{msg}\n\n— {quote['category']}"
 url = f"https://api.telegram.org/bot{BOT_TOKEN}/{endpoint}"
 
