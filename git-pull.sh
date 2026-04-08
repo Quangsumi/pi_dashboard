@@ -4,6 +4,7 @@ cd /home/pi/.openclaw/workspace/cronjobs/pi_dashboard
 echo "=== PULL FROM GITHUB: $(date '+%Y-%m-%d %H:%M:%S') ==="
 
 BEFORE=$(git rev-parse --short HEAD)
+git fetch upstream
 git merge upstream/main 2>&1
 AFTER=$(git rev-parse --short HEAD)
 
