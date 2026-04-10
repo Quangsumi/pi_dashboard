@@ -129,7 +129,7 @@ req = urllib.request.Request(
 )
 
 try:
-    with urllib.request.urlopen(req, timeout=30) as resp:
+    with urllib.request.urlopen(req, timeout=300) as resp:
         result = json.loads(resp.read())
         if result.get("ok"):
             print(f"{timestamp}\nOK: sent {chosen} to {CHAT_ID}")
