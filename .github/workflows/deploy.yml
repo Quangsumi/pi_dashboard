@@ -32,5 +32,5 @@ jobs:
           context: .
           push: true
           tags: |
-            ${{ secrets.DOCKERHUB_USERNAME }}/my-website:latest
-            ${{ secrets.DOCKERHUB_USERNAME }}/my-website:${{ github.sha }}
+            ${{ secrets.DOCKERHUB_USERNAME }}/pi-dashboard:latest
+            ${{ secrets.DOCKERHUB_USERNAME }}/pi-dashboard:${{ github.sha }}
