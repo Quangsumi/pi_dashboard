@@ -1,11 +1,13 @@
 .env
 .git
 .vscode
-*.md
-Dockerfile
-.dockerignore
 .gitignore
 .github
+
+.dockerignore
+Dockerfile
+
+*.md
 git-pull.sh
 send-quote-with-image.py
 docker-compose.yml
