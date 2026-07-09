@@ -14,11 +14,10 @@ A personal always-on dashboard running on a Raspberry Pi touchscreen. Quotes, me
 ## ✨ Features
 
 - **Quotes** — curated quotes grouped by category (finance, life, motivation) with live category filtering. Font auto-scales to always fit the panel.
-- **Media** — images, GIFs, and short videos auto-pulled from GitHub. No hardcoded URLs — drop a file in the repo and it appears.
+- **Media** — images, GIFs, and short videos served from the local `media` folder and discovered dynamically from its directory listing.
 - **World clocks** — 8 cities at a glance, plus a large local Hanoi clock overlaid on the media panel.
 - **10 themes** — amber, glass, ink, forest, rose, slate, dusk, copper, arctic, ember. Rotates automatically with every content change.
 - **Dim mode** — one tap to darken the screen for low-light hours.
-- **Offline resilient** — media list cached locally so the dashboard survives Pi reboots before the network is up.
 
 ---
 

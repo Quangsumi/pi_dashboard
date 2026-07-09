@@ -8,6 +8,4 @@
 Dockerfile
 
 *.md
-git-pull.sh
-send-quote-with-image.py
 docker-compose.yml
