@@ -1,5 +1,5 @@
 # Nginx cannot run as root.
-FROM nginxinc/nginx-unprivileged:alpine3.24-perl@sha256:sha256:233749086c407d88308169f2668c04965e56506b120ccf94fbf12ba7f8c608cc
+FROM nginxinc/nginx-unprivileged:alpine3.24-perl@sha256:233749086c407d88308169f2668c04965e56506b120ccf94fbf12ba7f8c608cc
 
 # Only required files enter the image.
 COPY --chown=101:101 nginx.conf /etc/nginx/conf.d/default.conf
