@@ -42,6 +42,10 @@ jobs:
             ${{ secrets.DOCKERHUB_USERNAME }}/pi-dashboard:latest
             ${{ secrets.DOCKERHUB_USERNAME }}/pi-dashboard:${{ github.sha }}
 
+      
+      # Below steps are for updating the k3s-homelab repository with the new image. 
+      # ArgoCD will pickup new image and deploy it to the cluster.
+
       - name: Checkout k3s homelab repository
         uses: actions/checkout@v4
         with:
