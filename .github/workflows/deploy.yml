@@ -54,7 +54,14 @@ jobs:
         env:
           IMAGE: quangsumi/pi-dashboard:${{ github.sha }}@${{ steps.build-push-image.outputs.digest }}
         run: |
-          FILE="/k3s-homelab/apps/pi-dashboard/00-pi-dashboard.yaml"
+          FILE="${GITHUB_WORKSPACE}/k3s-homelab/apps/pi-dashboard/00-pi-dashboard.yaml"
+
+          echo "Looking for: ${FILE}"
+          test -f "${FILE}" || {
+            echo "Manifest was not found"
+            find "${GITHUB_WORKSPACE}" -maxdepth 4 -type f
+            exit 1
+          }
 
           sed -i -E \
             "s#^([[:space:]]*)image: quangsumi/pi-dashboard:.*#\1image: ${IMAGE}#" \
@@ -64,9 +71,8 @@ jobs:
 
       - name: Commit image update
         shell: bash
+        working-directory: k3s-homelab
         run: |
-          cd k3s-homelab
-
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
