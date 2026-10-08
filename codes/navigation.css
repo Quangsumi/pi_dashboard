@@ -1,0 +1,24 @@
+/* Text controls share one dock and remain separate from image navigation. */
+.dashboard-controls {
+  position:absolute; left:14px; right:14px; bottom:14px;
+  z-index:10; display:flex; flex-wrap:wrap; align-items:center; gap:6px;
+}
+.dashboard-navigation { position:static; display:flex; }
+.dashboard-navigation a,
+.dashboard-controls #themeShuffleBtn,
+.dashboard-controls #dimBtn,
+.dashboard-controls #nextArrow {
+  position:static; display:flex; align-items:center; justify-content:center;
+  gap:5px; width:auto; height:auto; min-height:32px; padding:6px 9px;
+  border:1px solid var(--panel-border); border-radius:20px;
+  background:var(--switcher-bg,var(--panel-bg)); color:var(--text-primary);
+  text-decoration:none; font:11px 'Space Mono',monospace;
+  white-space:nowrap; opacity:1; transform:none;
+}
+.dashboard-controls #nextArrow { margin-left:auto; }
+.dashboard-controls #themeShuffleBtn:hover,
+.dashboard-controls #dimBtn:hover,
+.dashboard-controls #nextArrow:hover,
+.dashboard-navigation a:hover { background:var(--btn-hover); transform:none; }
+.dashboard-controls #dimBtn.active { color:var(--accent); border-color:var(--accent); }
+.dashboard-controls button:focus-visible,.dashboard-navigation a:focus-visible { outline:2px solid var(--accent); outline-offset:3px; }

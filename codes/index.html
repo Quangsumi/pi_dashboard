@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=DM+Serif+Display:ital@0;1&family=Space+Mono:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="navigation.css" />
 </head>
 <body>
 
@@ -26,9 +27,14 @@
       <img id="randomImage" class="center-img active" alt="Random content" />
       <img id="randomImageNext" class="center-img" alt="Next content" />
       <video id="randomVideo" class="center-img" autoplay loop muted playsinline></video>
-      <button id="nextArrow"><span>next</span> ›</button>
-      <button id="themeShuffleBtn" title="Random theme">◐</button>
-      <button id="dimBtn" title="Dim display">◑</button>
+      <div class="dashboard-controls">
+        <button id="themeShuffleBtn" title="Random theme">Theme</button>
+        <button id="dimBtn" title="Dim display" aria-pressed="false">Dim</button>
+        <nav class="dashboard-navigation" aria-label="Dashboard navigation">
+          <a id="homelab-dashboard-link" href="https://homelab-dashboard.lab/">Homelab <span aria-hidden="true">&#8599;</span></a>
+        </nav>
+        <button id="nextArrow"><span>next</span> ›</button>
+      </div>
     </div>
 
     <div id="right" class="panel">
@@ -37,6 +43,8 @@
     </div>
   </div>
 
+
+
   <div id="dim-overlay"></div>
   <script src="scripts/helpers.js"></script>
   <script src="scripts/quotes.js"></script>
@@ -44,5 +52,6 @@
   <script src="scripts/clocks.js"></script>
   <script src="scripts/theme.js"></script>
   <script src="scripts/script.js"></script>
+  <script src="scripts/navigation.js"></script>
 </body>
 </html>

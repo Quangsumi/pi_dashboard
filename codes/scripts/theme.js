@@ -18,6 +18,7 @@ window.Dashboard.theme = (() => {
     dimBtn.addEventListener("click", () => {
       const isDimmed = dimOverlay.classList.toggle("active");
       dimBtn.classList.toggle("active", isDimmed);
+      dimBtn.setAttribute("aria-pressed",String(isDimmed));
     });
   }
 
